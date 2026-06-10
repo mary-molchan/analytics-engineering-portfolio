@@ -32,12 +32,30 @@ Dans le secteur de l'assurance, ce type d'analyse est strategique car il relie d
 - Verification prealable des donnees sources avant execution metier.
 - Journalisation de sortie (statut, duree, utilisateur, role, periode traitee).
 
-## Logique du code (tres bref)
+## Logique du code
 1. Initialiser le contexte d'execution et les variables partagees.
 2. Calculer la periode de traitement et valider la presence des donnees sources.
 3. Executer le calcul des flux collecte/decollecte par apporteur.
 4. Executer le calcul des statistiques apporteurs et des indicateurs d'encours.
 5. Retourner un resultat d'orchestration exploitable pour le suivi.
+
+## Execution Order
+
+| Step | Script | Description |
+|---|---|---|
+| 1 | `sql/01_initialization.sql` | Initializes the required database objects, tables or parameters. |
+| 2 | `sql/02_sp_calc_app_stats.sql` | Calculates application-level statistics. |
+| 3 | `sql/03_sp_calc_collect_app.sql` | Collects and consolidates calculated application data. |
+| 4 | `sql/04_sp_orchestrate_apporteurs.sql` | Orchestrates the full pipeline execution. |
+
+## Documentation
+
+| Document | Description |
+|---|---|
+| `docs/project-overview.md` | General project introduction and business context. |
+| `docs/specifications/02_sp_calc_app_stats_specification.md` | Technical specification for application statistics calculation. |
+| `docs/specifications/03_sp_calc_collect_app_specification.md` | Technical specification for application data collection. |
+| `docs/specifications/04_sp_orchestrate_apporteurs_specification.md` | Technical specification for orchestration procedure. |
 
 ## Valeur apportee
 - Reduction de la complexite operationnelle grace a une architecture modulaire.
