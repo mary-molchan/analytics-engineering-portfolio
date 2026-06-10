@@ -40,10 +40,10 @@ Dans le secteur de l'assurance, ce type de dispositif est important car il perme
 5. Inserer les partitions manquantes uniquement dans la table de reporting.
 
 ## Script pour execution
-[`sql/Script_Reporting_Adherents_Courtiers.sql`](sql/Script_Reporting_Adherents_Courtiers.sql)
+[`Script_Reporting_Adherents_Courtiers`](sql/Script_Reporting_Adherents_Courtiers.sql)
 
 ## Documentation du script
-[`docs/Specification_SQL_Script_Reporting_Adherents_Courtiers.md`](Specification_SQL_Script_Reporting_Adherents_Courtiers)
+[`Specification_SQL_Script_Reporting_Adherents_Courtiers`](docs/Specification_SQL_Script_Reporting_Adherents_Courtiers.md)
 
 ## Valeur apportee
 - Alimentation plus performante qu'une vue recalculee en permanence.
