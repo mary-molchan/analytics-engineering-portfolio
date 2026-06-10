@@ -140,7 +140,7 @@
 
 | Version | Date | Developpeur | Modifications |
 |---|---|---|---|
-| v0.1 | 2026-06-10 | A completer | Remplissage initial base sur 2 sp_calc_app_stats.sql |
+| v0.1 | 2026-06-10 | A completer | Remplissage initial base sur 02_sp_calc_app_stats.sql |
 | v1.0 | YYYY-MM-DD |  | Validation initiale |
 
 ## Checklist de validation
