@@ -117,5 +117,4 @@ Il met en avant ma capacité à travailler sur des projets data de bout en bout 
 
 ## 🚀 Repository en évolution
 
-Ce portfolio est évolutif.  
-De nouveaux projets seront ajoutés progressivement afin de refléter l’évolution de mes compétences techniques, analytiques et méthodologiques.
+Ce portfolio est évolutif. De nouveaux projets seront ajoutés progressivement afin de refléter l’évolution de mes compétences techniques, analytiques et méthodologiques.
