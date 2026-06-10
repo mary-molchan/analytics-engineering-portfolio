@@ -1,4 +1,4 @@
-## En-tete
+## Spécifications du script de la procédure stockée sp_calc_collect_app
 
 | Titre | EPIN / Ticket | GitLab / Repo | Date de creation | Developpeur | Responsable du projet | Description fonctionnelle |
 |---|---|---|---|---|---|---|
