@@ -1,5 +1,10 @@
 # Analytics Engineering Portfolio
 
+![SQL](https://img.shields.io/badge/SQL-Data%20Querying-blue)
+![Python](https://img.shields.io/badge/Python-Data%20Analysis-yellow)
+![Power%20BI](https://img.shields.io/badge/Power%20BI-Dashboards-orange)
+![Snowflake](https://img.shields.io/badge/Snowflake-Data%20Warehouse-lightblue)
+
 Ce repository regroupe différents projets techniques et analytiques réalisés dans une logique de portfolio professionnel. L’objectif est de présenter ma capacité à transformer des besoins métier en solutions data structurées, documentées et exploitables.
 
 ---
