@@ -1,6 +1,4 @@
-# Modele de specification SQL (format tableau)
-
-## En-tete
+## Spécifications du script de la procédure stockée SP_MAJ_APPORT_PARTCALC
 
 | Titre | EPIN / Ticket | GitLab / Repo | Date de creation | Developpeur | Responsable du projet | Description fonctionnelle |
 |---|---|---|---|---|---|---|
@@ -10,7 +8,7 @@
 
 | Champ | Valeur |
 |---|---|
-| Nom du script SQL | 4 sp_orchestrate_apporteurs.sql |
+| Nom du script SQL | 04_sp_orchestrate_apporteurs.sql |
 | Type de script | Procedure stockee |
 | Nom objet principal (DB.Schema.Object) | DEV_DB_INSURANCE.SC_SYNTH_INSURANCE.SP_MAJ_APPORT_PARTCALC |
 | Environnement cible | Dev / Test / Prod |
@@ -124,7 +122,7 @@
 
 | Version | Date | Developpeur | Modifications |
 |---|---|---|---|
-| v0.1 | 2026-06-10 | A completer | Remplissage initial base sur 4 sp_orchestrate_apporteurs.sql |
+| v0.1 | 2026-06-10 | A completer | Remplissage initial base sur 04_sp_orchestrate_apporteurs.sql |
 | v1.0 | YYYY-MM-DD |  | Validation initiale |
 
 ## Checklist de validation
