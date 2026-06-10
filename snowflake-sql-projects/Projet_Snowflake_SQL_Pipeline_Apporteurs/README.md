@@ -43,18 +43,18 @@ Dans le secteur de l'assurance, ce type d'analyse est strategique car il relie d
 
 | Step | Script | Description |
 |---|---|---|
-| 1 | [`sql/01_initialization.sql`](sql/01_initialization.sql) | Initializes the required database objects, tables or parameters. |
-| 2 | [`sql/02_sp_calc_app_stats.sql`](sql/02_sp_calc_app_stats.sql) | Calculates application-level statistics. |
-| 3 | [`sql/03_sp_calc_collect_app.sql`](sql/03_sp_calc_collect_app.sql) | Collects and consolidates calculated application data. |
-| 4 | [`sql/04_sp_orchestrate_apporteurs.sql`](sql/04_sp_orchestrate_apporteurs.sql) | Orchestrates the full pipeline execution. |
+| 1 | [`sql/01_initialization.sql`](sql/01_initialization.sql) | Initialisation les objets, tables ou paramètres de base de données requis. |
+| 2 | [`sql/02_sp_calc_app_stats.sql`](sql/02_sp_calc_app_stats.sql) | Une procédure stockée permettant de collecter une liste d'apporteurs. |
+| 3 | [`sql/03_sp_calc_collect_app.sql`](sql/03_sp_calc_collect_app.sql) | Une procédure stockée de calcul des indicateurs financiers des apporteurs. |
+| 4 | [`sql/04_sp_orchestrate_apporteurs.sql`](sql/04_sp_orchestrate_apporteurs.sql) | Une procédure stockée orchestrée permettant des mises à jour rapides des données. |
 
 ## Documentation
 
 | Document | Description |
 |---|---|
-| [`docs/specifications/02_sp_calc_app_stats_specification.md`](docs/specifications/02_sp_calc_app_stats_specification.md) | Technical specification for application statistics calculation. |
-| [`docs/specifications/03_sp_calc_collect_app_specification.md`](docs/specifications/03_sp_calc_collect_app_specification.md) | Technical specification for application data collection. |
-| [`docs/specifications/04_sp_orchestrate_apporteurs_specification.md`](docs/specifications/04_sp_orchestrate_apporteurs_specification.md) | Technical specification for orchestration procedure. |
+| [`docs/specifications/02_sp_calc_app_stats_specification.md`](docs/specifications/02_sp_calc_app_stats_specification.md) | Spécifications techniques pour la création d'une procédure stockée permettant de collecter une liste d'apporteurs. |
+| [`docs/specifications/03_sp_calc_collect_app_specification.md`](docs/specifications/03_sp_calc_collect_app_specification.md) | Spécifications techniques pour la création d'une procédure stockée de calcul des indicateurs financiers des apporteurs. |
+| [`docs/specifications/04_sp_orchestrate_apporteurs_specification.md`](docs/specifications/04_sp_orchestrate_apporteurs_specification.md) | Spécifications techniques pour la création d'une procédure stockée orchestrée permettant des mises à jour rapides des données. |
 
 ## Valeur apportee
 - Reduction de la complexite operationnelle grace a une architecture modulaire.
