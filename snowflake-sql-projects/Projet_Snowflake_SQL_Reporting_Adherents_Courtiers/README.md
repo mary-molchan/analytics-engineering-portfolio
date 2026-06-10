@@ -43,7 +43,7 @@ Dans le secteur de l'assurance, ce type de dispositif est important car il perme
 [`sql/Script_Reporting_Adherents_Courtiers.sql`](sql/Script_Reporting_Adherents_Courtiers.sql)
 
 ## Documentation du script
-[`docs/Specification_SQL_Script_Reporting_Adherents_Courtiers.md`](docs/Specification_SQL_Script_Reporting_Adherents_Courtiers.md)
+[`docs/Specification_SQL_Script_Reporting_Adherents_Courtiers.md`](Specification_SQL_Script_Reporting_Adherents_Courtiers)
 
 ## Valeur apportee
 - Alimentation plus performante qu'une vue recalculee en permanence.
