@@ -52,7 +52,6 @@ Dans le secteur de l'assurance, ce type d'analyse est strategique car il relie d
 
 | Document | Description |
 |---|---|
-| [`docs/project-overview.md`](docs/project-overview.md) | General project introduction and business context. |
 | [`docs/specifications/02_sp_calc_app_stats_specification.md`](docs/specifications/02_sp_calc_app_stats_specification.md) | Technical specification for application statistics calculation. |
 | [`docs/specifications/03_sp_calc_collect_app_specification.md`](docs/specifications/03_sp_calc_collect_app_specification.md) | Technical specification for application data collection. |
 | [`docs/specifications/04_sp_orchestrate_apporteurs_specification.md`](docs/specifications/04_sp_orchestrate_apporteurs_specification.md) | Technical specification for orchestration procedure. |
