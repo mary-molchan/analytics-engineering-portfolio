@@ -1,5 +1,3 @@
-# Modele de specification SQL (format tableau)
-
 ## En-tete
 
 | Titre | EPIN / Ticket | GitLab / Repo | Date de creation | Developpeur | Responsable du projet | Description fonctionnelle |
