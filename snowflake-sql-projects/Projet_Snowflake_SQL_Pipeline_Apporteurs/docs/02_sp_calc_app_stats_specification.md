@@ -10,7 +10,7 @@
 
 | Champ | Valeur |
 |---|---|
-| Nom du script SQL | 2 sp_calc_app_stats.sql |
+| Nom du script SQL | 02_sp_calc_app_stats.sql |
 | Type de script | Procedure stockee |
 | Nom objet principal (DB.Schema.Object) | DEV_DB_INSURANCE.SC_SYNTH_INSURANCE.sp_calc_app_stats |
 | Environnement cible | Dev / Test / Prod |
