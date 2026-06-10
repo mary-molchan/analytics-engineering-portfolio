@@ -1,6 +1,4 @@
-# Modele de specification SQL (format tableau)
-
-## En-tete
+## Spécifications du script de la procédure stockée sp_calc_app_stats
 
 | Titre | EPIN / Ticket | GitLab / Repo | Date de creation | Developpeur | Responsable du projet | Description fonctionnelle |
 |---|---|---|---|---|---|---|
