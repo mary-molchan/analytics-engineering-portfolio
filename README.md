@@ -1,7 +1,6 @@
 # Analytics Engineering Portfolio
 
-Ce repository regroupe différents projets techniques et analytiques réalisés dans une logique de portfolio professionnel.  
-L’objectif est de présenter ma capacité à transformer des besoins métier en solutions data structurées, documentées et exploitables.
+Ce repository regroupe différents projets techniques et analytiques réalisés dans une logique de portfolio professionnel. L’objectif est de présenter ma capacité à transformer des besoins métier en solutions data structurées, documentées et exploitables.
 
 ---
 
