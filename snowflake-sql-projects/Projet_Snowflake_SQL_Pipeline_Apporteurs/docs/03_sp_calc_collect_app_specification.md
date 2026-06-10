@@ -10,7 +10,7 @@
 
 | Champ | Valeur |
 |---|---|
-| Nom du script SQL | 3 sp_calc_collect_app.sql |
+| Nom du script SQL | 03_sp_calc_collect_app.sql |
 | Type de script | Procedure stockee |
 | Nom objet principal (DB.Schema.Object) | DEV_DB_INSURANCE.SC_SYNTH_INSURANCE.sp_calc_collect_app |
 | Environnement cible | Dev / Test / Prod |
@@ -131,7 +131,7 @@
 
 | Version | Date | Developpeur | Modifications |
 |---|---|---|---|
-| v0.1 | 2026-06-10 | A completer | Remplissage initial base sur 3 sp_calc_collect_app.sql |
+| v0.1 | 2026-06-10 | A completer | Remplissage initial base sur 03_sp_calc_collect_app.sql |
 | v1.0 | YYYY-MM-DD |  | Validation initiale |
 
 ## Checklist de validation
