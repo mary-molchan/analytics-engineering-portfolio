@@ -24,11 +24,11 @@ Ce portfolio a pour objectif de démontrer mes compétences en :
 
 | Dossier | Description |
 |---|---|
-| [Snowflake & SQL Projects](snowflake-sql-projects/) | Projets autour de SQL, Snowflake, data warehousing, procédures stockées, pipelines analytiques et logique de reporting. |
-| [Power BI Projects](power-bi-projects/) | Projets de dashboards, modélisation sémantique, Power Query, DAX, KPI et visualisation de données. |
-| [Python Projects](python-projects/) | Projets d’analyse de données, nettoyage, exploration, visualisation, automatisation et statistiques avec Python. |
-| [Machine Learning Projects](machine-learning-projects/) | Projets de classification, scoring, détection d’anomalies, évaluation de modèles et pipelines prédictifs. |
-| [Generative AI Projects](gen-ai-projects/) | Projets utilisant l’IA générative pour l’automatisation, la documentation, l’assistance analytique et l’optimisation des processus. |
+| [Snowflake & SQL](snowflake-sql-projects/) | Projets autour de SQL, Snowflake, data warehousing, procédures stockées, pipelines analytiques et logique de reporting. |
+| [Power BI](power-bi-projects/) | Projets de dashboards, modélisation sémantique, Power Query, DAX, KPI et visualisation de données. |
+| [Python](python-projects/) | Projets d’analyse de données, nettoyage, exploration, visualisation, automatisation et statistiques avec Python. |
+| [Machine Learning](machine-learning-projects/) | Projets de classification, scoring, détection d’anomalies, évaluation de modèles et pipelines prédictifs. |
+| [Generative AI](gen-ai-projects/) | Projets utilisant l’IA générative pour l’automatisation, la documentation, l’assistance analytique et l’optimisation des processus. |
 
 ---
 
