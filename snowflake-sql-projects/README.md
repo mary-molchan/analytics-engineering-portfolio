@@ -1,8 +1,6 @@
 # ❄️ Projets Snowflake et SQL
 
-Ce dossier contient des projets axés sur SQL et Snowflake, portant notamment sur la modélisation des données, le stockage des données, les procédures stockées, la logique de reporting, la qualité des données et les transformations analytiques.
-
-Ces projets montrent comment SQL peut être utilisé non seulement pour interroger des données, mais aussi pour créer des pipelines de données structurés, préparer des couches de reporting métier, documenter la logique de transformation et organiser des workflows analytiques réutilisables.
+Ce dossier contient des projets axés sur SQL et Snowflake, portant notamment sur la modélisation des données, le stockage des données, les procédures stockées, la logique de reporting, la qualité des données et les transformations analytiques. Ces projets montrent comment SQL peut être utilisé non seulement pour interroger des données, mais aussi pour créer des pipelines de données structurés, préparer des couches de reporting métier, documenter la logique de transformation et organiser des workflows analytiques réutilisables.
 
 ---
 
