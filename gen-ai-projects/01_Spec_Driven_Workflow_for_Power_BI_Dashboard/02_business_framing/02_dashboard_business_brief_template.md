@@ -12,7 +12,7 @@ It should be completed from the clean meeting summary produced during Phase 1 â€
 
 | Field | Value |
 |---|---|
-| Source document | `../01_discovery/05_clean_meeting_summary_template.md` |
+| Source document | [`../01_discovery/05_clean_meeting_summary_template.md`](../01_discovery/05_clean_meeting_summary_template.md) |
 | Generated with Generative AI | Yes / No |
 | Manually reviewed by analyst | Yes / No |
 | Review date | |
@@ -194,4 +194,4 @@ Describe the main purpose of the Power BI dashboard.
 
 This validated business brief becomes the input for:
 
-- `../03_requirements_and_kpi/`
+[`../03_requirements_and_kpi/`](../03_requirements_and_kpi/)
