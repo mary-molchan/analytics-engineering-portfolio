@@ -1,5 +1,4 @@
-##  <img width="160" height="160" alt="image" src="https://github.com/user-attachments/assets/deeb33b7-8a2b-4b57-be5c-fea34578fb28" />
-Spec-Driven Workflow for Power BI Dashboard Creation
+##  Spec-Driven Workflow for Power BI Dashboard Creation (EN version)
 
 ```mermaid
 flowchart TD
