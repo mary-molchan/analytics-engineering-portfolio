@@ -1,4 +1,4 @@
-# Phase 3 — Requirements & KPI
+# Phase 3. Requirements & KPI.
 
 ## Purpose
 
