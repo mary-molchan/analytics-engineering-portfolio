@@ -1,4 +1,4 @@
-# Phase 1 — Discovery
+# Phase 1 - Discovery
 
 ## Purpose
 
