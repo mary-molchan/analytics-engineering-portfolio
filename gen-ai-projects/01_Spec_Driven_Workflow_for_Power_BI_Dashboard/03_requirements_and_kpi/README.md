@@ -11,11 +11,12 @@ This phase acts as the bridge between business understanding and dashboard desig
 ## Process Overview
 
 ```text
-Dashboard business brief
-→ Client requirements specification
-→ KPI dictionary
-→ Filters and dimensions
-→ Input for the Dashboard Design phase
+Validated Business Brief
+→ GenAI prompt for requirements
+→ Client Requirements Specification
+→ GenAI prompt for KPI dictionary
+→ KPI Dictionary
+→ Input for Dashboard Design phase
 ```
 
 ## What This Phase Covers
