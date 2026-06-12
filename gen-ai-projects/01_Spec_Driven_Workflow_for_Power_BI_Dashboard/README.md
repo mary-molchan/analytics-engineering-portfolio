@@ -12,11 +12,11 @@ The goal of this project is to reduce ambiguity, prevent unnecessary rework, imp
 
 | Phase | Folder | Description |
 |---|---|---|
-| **Phase 1 — Discovery** | [`01_discovery`](./01_discovery/) | Captures the initial client request through a meeting, transcript, or working notes and converts raw input into a structured meeting summary. |
-| **Phase 2 — Business Framing** | [`02_business_framing`](./02_business_framing/) | Clarifies the business context, dashboard objective, target users, decision-making needs, and key business questions. |
-| **Phase 3 — Requirements & KPI** | [`03_requirements_and_kpi`](./03_requirements_and_kpi/) | Formalizes client requirements, required dashboard pages, KPIs, filters, dimensions, business rules, and validation expectations. |
-| **Phase 4 — Dashboard Design** | [`04_dashboard_design`](./04_dashboard_design/) | Defines the dashboard structure, user journey, functional behavior, page logic, visuals, interactions, and visual design principles. |
-| **Phase 5 — Build Readiness** | [`05_build_readiness`](./05_build_readiness/) | Prepares the project for Power BI implementation through a technical specification, build backlog, pre-build validation, and client confirmation. |
+| **Phase 1 - Discovery** | [`01_discovery`](./01_discovery/) | Captures the initial client request through a meeting, transcript, or working notes and converts raw input into a structured meeting summary. |
+| **Phase 2 - Business Framing** | [`02_business_framing`](./02_business_framing/) | Clarifies the business context, dashboard objective, target users, decision-making needs, and key business questions. |
+| **Phase 3 - Requirements & KPI** | [`03_requirements_and_kpi`](./03_requirements_and_kpi/) | Formalizes client requirements, required dashboard pages, KPIs, filters, dimensions, business rules, and validation expectations. |
+| **Phase 4 - Dashboard Design** | [`04_dashboard_design`](./04_dashboard_design/) | Defines the dashboard structure, user journey, functional behavior, page logic, visuals, interactions, and visual design principles. |
+| **Phase 5 - Build Readiness** | [`05_build_readiness`](./05_build_readiness/) | Prepares the project for Power BI implementation through a technical specification, build backlog, pre-build validation, and client confirmation. |
 
 ## Repository Structure
 
