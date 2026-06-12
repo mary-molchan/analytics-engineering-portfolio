@@ -69,27 +69,39 @@ Describe the main purpose of the Power BI dashboard.
 
 ### Overview Questions
 
-- 
+-
+-
+-
 
 ### Performance Questions
 
-- 
+-
+-
+-
 
 ### Trend Questions
 
-- 
+-
+-
+-
 
 ### Comparison Questions
 
-- 
+-
+-
+-
 
 ### Root Cause Questions
 
-- 
+-
+-
+-
 
 ### Operational Follow-Up Questions
 
-- 
+-
+-
+-
 
 ---
 
