@@ -1,3 +1,6 @@
+## Spec-Driven Workflow for Power BI Dashboard Creation
+
+```mermaid
 flowchart TD
 
     subgraph P1[Phase 1 — Discovery]
@@ -38,3 +41,4 @@ flowchart TD
         S --> H
         R --> T[Power BI build phase]
     end
+```
