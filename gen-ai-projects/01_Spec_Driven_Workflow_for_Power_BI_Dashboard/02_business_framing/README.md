@@ -1,4 +1,4 @@
-# Phase 2 — Business Framing
+# Phase 2. Business Framing
 
 ## Purpose
 
