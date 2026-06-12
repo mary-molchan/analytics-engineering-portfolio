@@ -2,11 +2,28 @@
 
 ## Project Overview
 
-This project presents a **spec-driven workflow for creating a Power BI dashboard from scratch**, starting from the initial client discovery meeting and ending with a build-ready specification package.
+This project presents a **Generative AI-assisted, spec-driven workflow for creating a Power BI dashboard from scratch**.
 
-The workflow is designed to transform an unstructured client conversation into clear, validated, and reusable BI project artifacts. It focuses on the early stages of dashboard delivery: understanding the business need, defining the dashboard objective, documenting requirements, clarifying KPIs, designing the report structure, and validating readiness before the Power BI build phase begins.
+The workflow starts from an initial client discovery meeting and transforms unstructured business input — such as meeting notes, transcripts, stakeholder comments, or dashboard requests — into a complete, structured, and build-ready Power BI specification package.
 
-The goal of this project is to reduce ambiguity, prevent unnecessary rework, improve communication with stakeholders, and ensure that the final dashboard supports real business decisions rather than simply displaying disconnected visuals.
+The main purpose of this project is to demonstrate how **Generative AI can support and accelerate the early stages of BI dashboard delivery** by helping the analyst structure client requirements, clarify business objectives, define KPIs, design the dashboard logic, prepare documentation, and validate readiness before implementation.
+
+This workflow does not replace the BI analyst or Power BI developer. Instead, it positions Generative AI as an assistant for:
+
+- structuring raw meeting notes and transcripts;
+- extracting business context and decision-making needs;
+- drafting client requirements specifications;
+- identifying open questions and assumptions;
+- supporting KPI definition and validation;
+- drafting functional and visual design specifications;
+- preparing technical Power BI documentation;
+- generating a build backlog;
+- supporting pre-build validation and client confirmation.
+
+The analyst remains responsible for reviewing, validating, correcting, and approving all AI-generated outputs. This makes the workflow suitable for a professional BI context where traceability, human oversight, business alignment, and quality control are essential.
+
+The goal of this project is to reduce ambiguity, prevent unnecessary rework, improve stakeholder communication, and demonstrate how Generative AI can be integrated into a structured analytics engineering workflow.
+
 
 ## Workflow Phases
 
@@ -57,12 +74,29 @@ The goal of this project is to reduce ambiguity, prevent unnecessary rework, imp
 ## How to Use This Workflow
 
 1. Start with the **Discovery** phase to collect and structure the initial client request.
-2. Move to **Business Framing** to clarify the business objective and decision-making context.
-3. Use the **Requirements & KPI** phase to document what the dashboard must contain and how KPIs should be defined.
-4. Continue with **Dashboard Design** to define the report structure, user journey, visuals, and design rules.
-5. Complete the **Build Readiness** phase to validate whether the project is ready for Power BI implementation.
+2. Use Generative AI to transform raw notes or transcripts into a clean meeting summary.
+3. Move to **Business Framing** to clarify the business objective, target users, and decision-making context.
+4. Use the **Requirements & KPI** phase to document what the dashboard must contain and how KPIs should be defined.
+5. Continue with **Dashboard Design** to define the report structure, user journey, visuals, and design rules.
+6. Complete the **Build Readiness** phase to validate whether the project is ready for Power BI implementation.
+7. Review and validate every AI-generated artifact manually before using it as a project deliverable.
 
 Each phase contains reusable Markdown templates that can be adapted to real BI projects, client workshops, internal reporting initiatives, or portfolio case studies.
+
+## Human-in-the-Loop Principle
+
+This project follows a **human-in-the-loop approach**.
+
+Generative AI is used to accelerate drafting, structuring, summarizing, and documentation tasks. However, all outputs must be reviewed by a human analyst before being shared with stakeholders or used for implementation.
+
+The BI analyst remains responsible for:
+
+- validating business meaning;
+- checking KPI definitions;
+- identifying missing or ambiguous requirements;
+- confirming assumptions with stakeholders;
+- ensuring that the dashboard supports real business decisions;
+- approving the final specification package before the build phase.
 
 ## Workflow Diagram
 
