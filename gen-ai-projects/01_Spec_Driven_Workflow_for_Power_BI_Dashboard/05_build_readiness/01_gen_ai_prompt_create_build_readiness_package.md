@@ -1,4 +1,4 @@
-# GenAI Prompt. Create Build Readiness Package.
+# GenAI Prompt : Create Build Readiness Package.
 
 ## Purpose
 
