@@ -1,4 +1,9 @@
-# Phase 2 — Business Framing
+# Phase 2. Business Framing.
+
+![Phase](https://img.shields.io/badge/Phase_2-Business_Framing-FF8C00?style=for-the-badge)
+![Focus](https://img.shields.io/badge/Focus-Business_Purpose-blue?style=for-the-badge)
+![GenAI](https://img.shields.io/badge/GenAI-Assisted-purple?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Workflow_Phase-green?style=for-the-badge)
 
 ## Purpose
 
