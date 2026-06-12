@@ -176,7 +176,7 @@ Type can be:
 
 ## 12. Recommended Corrections
 
-Provide a concise list of corrections to apply to [`02_dashboard_business_brief_template.md`](./02_dashboard_business_brief_template.md)
+Provide a concise list of corrections to apply to `02_dashboard_business_brief_template.md`
 
 ## 13. Final Recommendation
 
@@ -199,7 +199,7 @@ Now review the following Dashboard Business Brief:
 
 After running this prompt:
 
-1. Apply the recommended corrections to `02_dashboard_business_brief_template.md`.
+1. Apply the recommended corrections to [`02_dashboard_business_brief_template.md`](./02_dashboard_business_brief_template.md).
 2. Update the `Review Status` section in the Business Brief.
 3. Mark the document as:
    - `Approved`;
