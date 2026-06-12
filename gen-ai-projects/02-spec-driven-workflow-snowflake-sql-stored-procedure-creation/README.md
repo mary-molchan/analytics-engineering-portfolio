@@ -1,4 +1,4 @@
-# Spec-Driven Workflow for Snowflake SQL Stored Procedure Creation — EN
+# Spec-Driven Workflow for Snowflake SQL Stored Procedure Creation - EN
 
 ![Project](https://img.shields.io/badge/Project-Spec_Driven_SQL_Workflow-7B61FF?style=for-the-badge)
 ![Scope](https://img.shields.io/badge/Scope-End_to_End_SQL_Delivery-blue?style=for-the-badge)
