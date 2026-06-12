@@ -1,5 +1,10 @@
 ##  Spec-Driven Workflow for Power BI Dashboard Creation (EN version)
 
+![Project](https://img.shields.io/badge/Project-Spec_Driven_Workflow-7B61FF?style=for-the-badge)
+![Scope](https://img.shields.io/badge/Scope-End_to_End_Workflow-blue?style=for-the-badge)
+![GenAI](https://img.shields.io/badge/GenAI-Assisted-purple?style=for-the-badge)
+![Output](https://img.shields.io/badge/Output-Build_Ready_Specification-green?style=for-the-badge)
+
 ## Project Overview
 
 This project presents a **Generative AI-assisted, spec-driven workflow for creating a Power BI dashboard from scratch**.
