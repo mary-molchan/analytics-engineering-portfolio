@@ -1,4 +1,8 @@
 # Phase 3. Requirements & KPI.
+![Phase](https://img.shields.io/badge/Phase_3-Requirements_%26_KPI-7B61FF?style=for-the-badge)
+![Focus](https://img.shields.io/badge/Focus-Requirements_%26_KPI-blue?style=flat-square)
+![GenAI](https://img.shields.io/badge/GenAI-assisted-purple?style=flat-square)
+![Status](https://img.shields.io/badge/Status-Workflow_phase-green?style=flat-square)
 
 ## Purpose
 
