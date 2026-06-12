@@ -2,22 +2,27 @@
 
 ## Purpose
 
-This document summarizes the initial client discovery meeting for a Power BI dashboard project.
+This document is the structured output of the Discovery phase.
 
-It transforms raw meeting notes, transcripts, or informal stakeholder input into a structured summary that can be used in the next phases of the workflow: business framing, requirements definition, KPI clarification, dashboard design, and build readiness.
+It transforms raw meeting notes, checklist answers, and transcript excerpts into a clean, organized, and reusable summary for the next workflow phase: **Business Framing**.
 
-The goal is to create a reliable and traceable summary without inventing missing information.
+This document should not contain raw notes or transcript excerpts. It should contain only cleaned, structured, and reviewed information extracted from the discovery meeting.
 
-## Source Material
+---
 
-| Source | Available? | Notes |
-|---|---|---|
-| Meeting recording | Yes / No | |
-| Transcript | Yes / No | |
-| Raw notes | Yes / No | |
-| Initial request | Yes / No | |
-| Existing dashboard examples | Yes / No | |
-| Jira ticket / Email request | Yes / No | |
+## Source Information
+
+| Field | Value |
+|---|---|
+| Source document | `02_raw_notes_template.md` |
+| Generated with Generative AI | Yes / No |
+| Manually reviewed by analyst | Yes / No |
+| Review date | |
+| Ready for Phase 2 | Yes / Conditional / No |
+
+---
+
+# Clean Meeting Summary
 
 ## 1. Meeting Context
 
@@ -30,231 +35,315 @@ The goal is to create a reliable and traceable summary without inventing missing
 | Business owner | |
 | Participants | |
 | Analyst | |
-| Meeting objective | |
+| Meeting purpose | |
+| Source material used | Notes / Transcript / Checklist answers / Recording |
 
-## 2. Business Problem
+---
 
-Describe the business issue, reporting need, or decision-making gap discussed during the meeting.
+## 2. Initial Request
 
-```text
-[Describe the business problem here]
-```
+Summarize the initial dashboard request in clear business language.
 
-## 3. Dashboard Objective
+| Item | Description |
+|---|---|
+| Initial request | |
+| Request status | Confirmed / To be confirmed |
+| Notes | |
+
+---
+
+## 3. Business Context
+
+| Item | Description |
+|---|---|
+| Business domain | |
+| Business process / activity concerned | |
+| Team / department concerned | |
+| Current reporting situation | |
+| Existing reports or tools mentioned | |
+| Reason why the dashboard is needed now | |
+
+---
+
+## 4. Business Problem
+
+Describe the business problem, pain point, reporting gap, or decision-making issue discussed during the meeting.
+
+| Type | Description |
+|---|---|
+| Confirmed business problem | |
+| Current pain point | |
+| Decision-making gap | |
+| Possible interpretation | |
+| Information to be confirmed | |
+
+---
+
+## 5. Dashboard Objective
 
 Describe the main purpose of the future Power BI dashboard.
 
-```text
-[Describe the dashboard objective here]
-```
+| Objective Area | Description |
+|---|---|
+| Main dashboard objective | |
+| Monitoring need | |
+| Reporting need | |
+| Decision-making need | |
+| Performance tracking need | |
+| Operational follow-up need | |
+| Executive overview need | |
+| Manual reporting replacement | |
 
-## 4. Target Users
+---
 
-| User group | Role | Expected usage | Notes |
-|---|---|---|---|
-| | | | |
+## 6. Target Users
 
-## 5. Expected Decisions Supported by the Dashboard
-
-| Decision | User group | Frequency | Required information |
-|---|---|---|---|
-| | | | |
-
-## 6. Requested Dashboard Pages or Views
-
-| Page / View | Purpose | Priority | Status |
-|---|---|---|---|
-| | | High / Medium / Low | Confirmed / To be confirmed |
-
-## 7. Requested KPIs and Metrics
-
-| KPI / Metric | Business meaning | Priority | Status |
-|---|---|---|---|
-| | | High / Medium / Low | Confirmed / To be confirmed |
-
-## 8. Mentioned Data Sources
-
-| Source | Type | Owner | Refresh frequency | Notes |
+| User group | Role / Profile | Expected usage | Level of detail needed | Status |
 |---|---|---|---|---|
-| | Database / File / System | | | |
+| | | | | Confirmed / To be confirmed |
 
-## 9. Filters and Dimensions Mentioned
+---
 
-| Filter / Dimension | Purpose | Status |
+## 7. Expected Decisions Supported by the Dashboard
+
+| Decision / Action | User group | Frequency | Required information | Status |
+|---|---|---|---|---|
+| | | | | Confirmed / To be confirmed |
+
+---
+
+## 8. Key Business Questions
+
+### Overview Questions
+
+- 
+- 
+- 
+
+### Performance Questions
+
+- 
+- 
+- 
+
+### Trend Questions
+
+- 
+- 
+- 
+
+### Comparison Questions
+
+- 
+- 
+- 
+
+### Root Cause Questions
+
+- 
+- 
+- 
+
+### Operational Follow-Up Questions
+
+- 
+- 
+- 
+
+---
+
+## 9. Requested Dashboard Pages or Views
+
+| Page / View | Purpose | Target user | Priority | Status |
+|---|---|---|---|---|
+| | | | High / Medium / Low | Confirmed / To be confirmed |
+
+If the page structure was not discussed, write:
+
+> To be defined in the Dashboard Design phase.
+
+---
+
+## 10. Requested KPIs and Metrics
+
+| KPI / Metric | Business meaning | Formula mentioned? | Priority | Owner / Validator | Status |
+|---|---|---|---|---|---|
+| | | Yes / No / To be confirmed | High / Medium / Low | | Confirmed / To be confirmed |
+
+---
+
+## 11. Mentioned Data Sources
+
+| Data source | Type | Owner | Refresh frequency | Notes | Status |
+|---|---|---|---|---|---|
+| | Database / Excel / SharePoint / CRM / ERP / Data warehouse / API / Manual extract / Existing dataset / Unknown | | | | Confirmed / To be confirmed |
+
+---
+
+## 12. Filters and Dimensions
+
+| Filter / Dimension | Purpose | Applies to | Status |
+|---|---|---|---|
+| | | Global / Specific page / To be confirmed | Confirmed / To be confirmed |
+
+---
+
+## 13. Visual and UX Preferences
+
+Summarize any expectations about dashboard style, layout, visuals, tables, exports, branding, accessibility, or examples shared by the client.
+
+| Topic | Notes |
+|---|---|
+| Dashboard style | |
+| Existing examples | |
+| Layout expectations | |
+| Preferred visuals | |
+| Tables / matrices | |
+| Executive summary | |
+| Detailed views | |
+| Navigation | |
+| Tooltips | |
+| Export needs | |
+| Branding | |
+| Accessibility | |
+
+---
+
+## 14. Interactions and Navigation
+
+| Interaction / Navigation Element | Required? | Notes |
 |---|---|---|
-| | | Confirmed / To be confirmed |
+| Slicers | Yes / No / To be confirmed | |
+| Drill-down | Yes / No / To be confirmed | |
+| Drill-through | Yes / No / To be confirmed | |
+| Bookmarks | Yes / No / To be confirmed | |
+| Navigation buttons | Yes / No / To be confirmed | |
+| Custom tooltips | Yes / No / To be confirmed | |
+| Cross-filtering | Yes / No / To be confirmed | |
+| Export | Yes / No / To be confirmed | |
+| Reset filters | Yes / No / To be confirmed | |
+| Page navigation | Yes / No / To be confirmed | |
 
-## 10. Visual Preferences
+---
 
-Document any visual expectations mentioned by the client.
+## 15. Security and Access Constraints
 
-Examples:
-
-- preferred dashboard style;
-- examples of existing reports;
-- expected charts;
-- need for executive overview;
-- need for detailed operational view;
-- corporate branding;
-- export needs.
-
-```text
-[Describe visual preferences here]
-```
-
-## 11. Interactions and Navigation
-
-Document any expectations related to dashboard interactions.
-
-Examples:
-
-- slicers;
-- drill-down;
-- drill-through;
-- bookmarks;
-- tooltips;
-- navigation buttons;
-- export to Excel;
-- page-level filters;
-- cross-filtering.
-
-```text
-[Describe interaction and navigation expectations here]
-```
-
-## 12. Security and Access Constraints
-
-| Constraint | Description | Status |
+| Topic | Description | Status |
 |---|---|---|
 | Access groups | | To be confirmed |
 | Row-level security | | To be confirmed |
+| Restricted pages | | To be confirmed |
+| Restricted KPIs | | To be confirmed |
 | Sensitive data | | To be confirmed |
+| Personal data | | To be confirmed |
 | GDPR / data privacy | | To be confirmed |
+| Confidentiality constraints | | To be confirmed |
 
-## 13. Constraints and Risks
+---
 
-| Constraint / Risk | Description | Impact | Action needed |
-|---|---|---|---|
-| | | High / Medium / Low | |
+## 16. Refresh, Usage, and Maintenance
 
-## 14. Confirmed Decisions
+| Topic | Description | Status |
+|---|---|---|
+| Expected refresh frequency | | To be confirmed |
+| Usage frequency | | To be confirmed |
+| Dashboard owner | | To be confirmed |
+| Maintenance owner | | To be confirmed |
+| Future updates | | To be confirmed |
+| Version 2 expectations | | To be confirmed |
+| Last refresh date requirement | | To be confirmed |
+
+---
+
+## 17. Confirmed Decisions
 
 | Decision | Confirmed by | Notes |
 |---|---|---|
 | | | |
 
-## 15. Assumptions
+Only include decisions clearly confirmed during the meeting.
+
+---
+
+## 18. Assumptions
 
 | Assumption | Reason | Needs confirmation? |
 |---|---|---|
 | | | Yes / No |
 
-## 16. Open Questions
+Do not present assumptions as confirmed facts.
 
-| Question | Owner | Priority | Required before next phase? |
+---
+
+## 19. Constraints, Risks, and Dependencies
+
+| Type | Description | Impact | Required action |
+|---|---|---|---|
+| Data availability | | High / Medium / Low | |
+| Data quality | | High / Medium / Low | |
+| Unclear KPI definition | | High / Medium / Low | |
+| Stakeholder availability | | High / Medium / Low | |
+| Access rights | | High / Medium / Low | |
+| Deadline | | High / Medium / Low | |
+| Security | | High / Medium / Low | |
+| Technical dependency | | High / Medium / Low | |
+| Business alignment | | High / Medium / Low | |
+
+---
+
+## 20. Open Questions
+
+| Question | Owner | Priority | Blocking? |
 |---|---|---|---|
 | | | High / Medium / Low | Yes / No |
 
-## 17. Recommended Next Steps
+---
 
-1. Confirm the clean meeting summary with the requester if needed.
-2. Clarify blocking open questions.
-3. Move to Phase 2 — Business Framing.
-4. Create the dashboard business brief.
-5. Prepare the first version of the client requirements specification.
+## 21. Recommended Next Steps
 
-## Generative AI Prompt — Create Clean Meeting Summary
+1. 
+2. 
+3. 
+4. 
+5. 
 
-```text
-You are a senior business analyst and Power BI consultant.
+---
 
-I will provide raw notes or a transcript from a discovery meeting for a Power BI dashboard project.
+## 22. Readiness for Phase 2
 
-Your task is to create a structured clean meeting summary.
+| Item | Assessment |
+|---|---|
+| Ready for Phase 2 | Yes / Conditional / No |
+| Reason | |
+| Blocking missing information | |
+| Non-blocking missing information | |
+| Required clarifications before Phase 2 | |
 
-Rules:
-- Do not invent information.
-- If something is unclear, mark it as "To be confirmed".
-- Separate confirmed information, assumptions, risks, and open questions.
-- Preserve business meaning and stakeholder intent.
-- Use clear and professional wording.
-- Prepare the output so it can be reused in the next workflow phase.
-- Separate KPIs from filters, dimensions, and data sources.
-- Keep all open questions visible and actionable.
-
-Output structure:
-1. Meeting context
-2. Business problem
-3. Dashboard objective
-4. Target users
-5. Expected decisions
-6. Requested pages or views
-7. Requested KPIs and metrics
-8. Mentioned data sources
-9. Filters and dimensions
-10. Visual preferences
-11. Interactions and navigation
-12. Security and access constraints
-13. Constraints and risks
-14. Confirmed decisions
-15. Assumptions
-16. Open questions
-17. Recommended next steps
-
-Input:
-[paste raw notes or transcript here]
-```
-
-## Generative AI Prompt — Review the Summary
-
-```text
-You are a senior BI project reviewer.
-
-Review the following clean meeting summary for a Power BI dashboard project.
-
-Check whether:
-1. The business problem is clear.
-2. The dashboard objective is explicit.
-3. Target users are identified.
-4. Expected business decisions are described.
-5. KPIs are separated from dimensions and filters.
-6. Confirmed facts are separated from assumptions.
-7. Open questions are visible.
-8. Risks and constraints are documented.
-9. Security and access constraints are mentioned if relevant.
-10. The summary is ready to be used in the Business Framing phase.
-
-Return:
-- readiness score from 0 to 100%;
-- blocking issues;
-- non-blocking issues;
-- missing information;
-- recommended next steps.
-
-Clean meeting summary:
-[paste summary here]
-```
+---
 
 ## Human Validation Checklist
 
-Before moving to Phase 2, verify that:
+Before using this document as input for Phase 2, verify that:
 
-- the summary reflects the actual client conversation;
-- no AI-generated assumptions are presented as facts;
-- business objective and problem are clearly separated;
-- KPI names are accurate;
-- missing KPI definitions are marked as `To be confirmed`;
-- data sources are listed only if mentioned;
-- open questions are actionable;
-- risks and constraints are visible;
-- sensitive or confidential information is removed if needed;
-- the document is ready to support Business Framing.
+- no information was invented;
+- assumptions are not presented as confirmed facts;
+- KPIs are not confused with filters or dimensions;
+- data sources are not invented;
+- open questions are visible and actionable;
+- sensitive information is flagged or removed;
+- business meaning is preserved;
+- dashboard objective is clear;
+- target users are identified;
+- blockers are clearly marked;
+- the document is ready for `02_business_framing`.
 
-## Output of This Phase
+---
 
-The completed clean meeting summary becomes the official input for:
+## Output of This Document
+
+This clean meeting summary becomes the official input for:
 
 - `02_business_framing/dashboard_business_brief_template.md`;
-- future client requirements;
+- client requirements specification;
 - KPI dictionary preparation;
 - dashboard structure and design.
