@@ -2,7 +2,6 @@
 
 ![Project](https://img.shields.io/badge/Project-Spec_Driven_SQL_Workflow-7B61FF?style=for-the-badge)
 ![Scope](https://img.shields.io/badge/Scope-End_to_End_SQL_Delivery-blue?style=for-the-badge)
-![Snowflake](https://img.shields.io/badge/Snowflake-SQL_Procedure-29B5E8?style=for-the-badge)
 ![GenAI](https://img.shields.io/badge/GenAI-Assisted-purple?style=for-the-badge)
 ![Output](https://img.shields.io/badge/Output-Release_Ready_SQL_Package-green?style=for-the-badge)
 
