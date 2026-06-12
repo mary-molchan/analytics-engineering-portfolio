@@ -33,32 +33,91 @@ The goal of this project is to reduce ambiguity, prevent unnecessary rework, imp
 
 ---
 
-## Workflow Phases
+## Business Workflow Phases
 
-| Phase | Folder | Main purpose |
-|---|---|---|
-| **Phase 1 - Discovery** | [`01_discovery`](./01_discovery/) | Captures the initial client request, guides the discovery meeting, stores raw notes, and converts unstructured input into a clean meeting summary. |
-| **Phase 2 - Business Framing** | [`02_business_framing`](./02_business_framing/) | Converts the discovery summary into a business brief that clarifies the dashboard purpose, users, supported decisions, scope, and expected value. |
-| **Phase 3 - Requirements & KPI** | [`03_requirements_and_kpi`](./03_requirements_and_kpi/) | Formalizes dashboard requirements and structures the KPI dictionary before moving to design. |
-| **Phase 4 - Dashboard Design** | [`04_dashboard_design`](./04_dashboard_design/) | Defines the dashboard structure, user journey, functional behavior, page logic, visuals, interactions, and visual design principles. |
-| **Phase 5 - Build Readiness** | [`05_build_readiness`](./05_build_readiness/) | Prepares the project for Power BI implementation through technical specifications, backlog preparation, validation, and client confirmation. |
+| Phase | Folder | Main purpose | Generative AI value | Analytics Engineer role |
+|---|---|---|---|---|
+| **Phase 1 - Discovery** | [`01_discovery`](./01_discovery/) | Captures the initial client request, prepares the discovery meeting, stores raw notes or transcripts, and converts unstructured stakeholder input into a clean meeting summary. | Helps structure messy meeting material, extract key points, identify missing information, and separate confirmed facts from assumptions. | Guides the discovery process, validates the meeting summary, checks business meaning, and ensures that the initial request is correctly understood before moving forward. |
+| **Phase 2 - Business Framing** | [`02_business_framing`](./02_business_framing/) | Converts the discovery summary into a business brief that clarifies the dashboard purpose, target users, supported decisions, scope, expected value, risks, and open questions. | Helps transform raw discovery output into a clear business-oriented brief and highlights unclear objectives, weak scope definition, or missing decision-making context. | Confirms the business objective, challenges unclear needs, validates the scope, and ensures that the dashboard is framed as a decision-support tool rather than a collection of visuals. |
+| **Phase 3 - Requirements & KPI** | [`03_requirements_and_kpi`](./03_requirements_and_kpi/) | Formalizes client requirements and structures the KPI dictionary, including business questions, functional needs, filters, dimensions, metric definitions, owners, and validation issues. | Helps draft structured requirements, extract KPIs and metrics, identify missing definitions, distinguish KPIs from dimensions, and surface unresolved data or ownership questions. | Reviews requirements, validates KPI logic with business owners, checks that formulas are not invented, and ensures that requirements are specific enough for dashboard design. |
+| **Phase 4 - Dashboard Design** | [`04_dashboard_design`](./04_dashboard_design/) | Defines the dashboard structure, user journey, page logic, visual components, charts, tables, matrices, filters, interactions, navigation, and visual design principles. | Helps convert requirements into a structured dashboard concept, propose suitable visual families, organize analytical flow, and document design assumptions or open questions. | Validates that each page and visual supports a real business question, checks usability and readability, and ensures that the design is feasible and aligned with Power BI implementation constraints. |
+| **Phase 5 - Build Readiness** | [`05_build_readiness`](./05_build_readiness/) | Prepares the project for Power BI implementation through a build readiness package, technical preparation, model and KPI implementation checks, backlog creation, validation review, and client confirmation. | Helps translate the validated design into a developer-oriented build package, structure implementation tasks, identify blockers, and draft a clear stakeholder confirmation message. | Assesses technical feasibility, reviews data/model readiness, validates DAX and semantic model needs, prioritizes build tasks, confirms blockers, and approves whether the project is ready to enter the Power BI build phase. |
+
+The final output is a **validated, traceable, build-ready Power BI specification package** that can be used to start the actual Power BI development phase with reduced ambiguity and stronger business alignment.
 
 ---
 
 ## Generative AI Role Across the Workflow
 
-| Workflow area | GenAI contribution | Analyst responsibility |
+Generative AI is used as a workflow accelerator, not as an autonomous decision-maker.  
+It helps structure information, draft documentation, identify gaps, and prepare reusable project artifacts.  
+The Analytics Engineer remains responsible for validation, business alignment, technical feasibility, and final approval.
+
+| Workflow area | GenAI contribution | Analytics Engineer responsibility |
 |---|---|---|
-| Discovery | Structures meeting notes, transcripts, and stakeholder input. | Validate that the summary reflects the actual client conversation. |
-| Business framing | Converts discovery output into a clear dashboard business brief. | Confirm business purpose, users, decisions, and scope. |
-| Requirements | Drafts structured client requirements from the business brief. | Check that no unsupported requirements are invented. |
-| KPI definition | Extracts and structures KPIs, metrics, owners, and validation needs. | Confirm definitions with KPI owners and mark missing logic. |
-| Dashboard design | Supports functional and visual design documentation. | Ensure design choices support real business questions. |
-| Build readiness | Helps prepare technical documentation, backlog, and validation checks. | Approve readiness before implementation starts. |
+| Discovery | Structures meeting notes, transcripts, and stakeholder input into a clean summary. | Validate that the summary reflects the real client conversation and does not turn assumptions into facts. |
+| Business framing | Converts discovery output into a business-oriented dashboard brief. | Confirm the business objective, target users, supported decisions, scope, and expected value. |
+| Requirements | Drafts structured client requirements from the validated business brief. | Check that requirements are specific, realistic, and supported by confirmed business needs. |
+| KPI definition | Extracts and structures KPIs, metrics, owners, definition status, and validation needs. | Confirm KPI definitions with business owners and mark missing formulas, owners, or data logic as `To be confirmed`. |
+| Dashboard design | Supports the creation of dashboard structure, user journey, visual components, charts, tables, matrices, and UX rules. | Ensure that each page and visual supports a real business question and remains feasible for Power BI implementation. |
+| Build readiness | Helps prepare the build readiness package, implementation backlog, validation checks, blockers, and client confirmation message. | Assess technical feasibility, validate data/model readiness, approve the Go / Conditional Go / No-Go decision, and confirm readiness before development starts. |
+
+---
+
+## Business Workflow Diagram
+
+```mermaid
+flowchart TD
+
+    subgraph P1[Phase 1 — Discovery]
+        A[Client meeting] --> B[Raw notes / transcript]
+        B --> C[Clean meeting summary]
+    end
+
+    subgraph P2[Phase 2 — Business framing]
+        C --> D[Dashboard business brief]
+        D --> E[Business objective]
+        D --> F[Target users]
+        D --> G[Key business questions]
+    end
+
+    subgraph P3[Phase 3 — Requirements and KPI]
+        E --> H[Client requirements specification]
+        F --> H
+        G --> H
+        H --> I[KPI dictionary]
+        H --> J[Filters and dimensions]
+    end
+
+    subgraph P4[Phase 4 — Dashboard design]
+        H --> K[Functional specification]
+        I --> K
+        K --> L[Dashboard structure and user journey]
+        L --> M[Visual design specification]
+    end
+
+    subgraph P5[Phase 5 — Build readiness]
+        L --> N[Technical Power BI specification]
+        M --> O[Build backlog]
+        N --> O
+        O --> P[Pre-build validation review]
+        P --> Q{Ready to build?}
+        Q -->|Yes| R[Client confirmation]
+        Q -->|No| S[Clarify or rework requirements]
+        S --> H
+        R --> T[Power BI build phase]
+    end
+```
 
 ---
 
 ## Repository Structure
+
+The repository is organized as a five-phase workflow that follows the lifecycle of a Power BI dashboard project — from the initial client discovery to build readiness.
+
+Each phase contains a dedicated `README.md`, reusable **Generative AI prompt files**, and structured **artifact templates**. Prompt files are used to guide AI-assisted drafting, structuring, review, or transformation tasks. Artifact templates are the documents produced, completed, and validated by the Analytics Engineer before moving to the next phase.
+
+The structure keeps the workflow modular, traceable, and easy to reuse across different BI dashboard projects.
 
 ```text
 01_Spec_Driven_Workflow_for_Power_BI_Dashboard/
@@ -148,64 +207,3 @@ The final output of this workflow is a **build-ready Power BI specification pack
 - technical Power BI preparation;
 - a build backlog;
 - pre-build validation and client confirmation.
-
-## Business Workflow Summary
-
-The workflow diagram below represents the **business logic of the dashboard delivery process**.
-
-It shows how an initial dashboard request is progressively transformed into a build-ready Power BI specification package. The diagram focuses on the main business artifacts, validation steps, and decision points. It does not show every Generative AI prompt file, because prompts are used as operational tools to create, structure, or review the main artifacts.
-
-| Phase | Business role in the workflow |
-|---|---|
-| **Phase 1 — Discovery** | Captures the initial client request, meeting notes, transcripts, and stakeholder input, then turns them into a clean meeting summary. |
-| **Phase 2 — Business Framing** | Clarifies why the dashboard is needed, who will use it, what decisions it should support, and which business questions it must answer. |
-| **Phase 3 — Requirements & KPI** | Translates the business brief into structured client requirements and a KPI dictionary, including filters, dimensions, metric definitions, risks, and open questions. |
-| **Phase 4 — Dashboard Design** | Defines how the dashboard should be structured and experienced by users: pages, user journey, visual components, charts, tables, matrices, interactions, and visual design principles. |
-| **Phase 5 — Build Readiness** | Converts the validated design into a developer-oriented build readiness package, including technical preparation, implementation backlog, validation checks, blockers, and client confirmation. |
-
-The final output is a **validated, traceable, build-ready Power BI specification package** that can be used to start the actual Power BI development phase with reduced ambiguity and stronger business alignment.
-
-## Business Workflow Diagram
-
-```mermaid
-flowchart TD
-
-    subgraph P1[Phase 1 — Discovery]
-        A[Client meeting] --> B[Raw notes / transcript]
-        B --> C[Clean meeting summary]
-    end
-
-    subgraph P2[Phase 2 — Business framing]
-        C --> D[Dashboard business brief]
-        D --> E[Business objective]
-        D --> F[Target users]
-        D --> G[Key business questions]
-    end
-
-    subgraph P3[Phase 3 — Requirements and KPI]
-        E --> H[Client requirements specification]
-        F --> H
-        G --> H
-        H --> I[KPI dictionary]
-        H --> J[Filters and dimensions]
-    end
-
-    subgraph P4[Phase 4 — Dashboard design]
-        H --> K[Functional specification]
-        I --> K
-        K --> L[Dashboard structure and user journey]
-        L --> M[Visual design specification]
-    end
-
-    subgraph P5[Phase 5 — Build readiness]
-        L --> N[Technical Power BI specification]
-        M --> O[Build backlog]
-        N --> O
-        O --> P[Pre-build validation review]
-        P --> Q{Ready to build?}
-        Q -->|Yes| R[Client confirmation]
-        Q -->|No| S[Clarify or rework requirements]
-        S --> H
-        R --> T[Power BI build phase]
-    end
-```
