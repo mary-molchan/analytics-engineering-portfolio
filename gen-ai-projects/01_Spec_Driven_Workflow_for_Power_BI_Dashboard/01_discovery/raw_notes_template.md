@@ -2,11 +2,11 @@
 
 ## Purpose
 
-This template is used to capture raw input from the initial client discovery meeting for a Power BI dashboard project.
+This document is used to capture raw input from the initial discovery meeting for a Power BI dashboard project.
 
-The goal is not to produce a polished specification at this stage, but to preserve the original business input, stakeholder comments, decisions, assumptions, and open questions.
+It is not a polished specification. Its role is to preserve the original meeting material before it is transformed into a structured clean meeting summary.
 
-This document serves as the source material for the clean meeting summary generated in the next step.
+---
 
 ## Meeting Information
 
@@ -15,202 +15,233 @@ This document serves as the source material for the clean meeting summary genera
 | Project name | |
 | Meeting date | |
 | Meeting type | Video call / In-person / Workshop |
-| Client / business owner | |
+| Client / Business owner | |
 | Participants | |
 | Analyst | |
 | Business domain | |
 | Dashboard name, if known | |
 | Recording available | Yes / No |
 | Transcript available | Yes / No |
-| Existing dashboard available | Yes / No |
-| Initial request source | Email / Jira ticket / Verbal request / Workshop / Other |
+| Existing report or dashboard available | Yes / No |
 
-## Initial Business Request
+---
 
-Briefly describe the initial dashboard request in the client’s own words.
+## Initial Request
 
 ```text
-[Paste or write the initial request here]
+[Paste the initial client request here]
 ```
 
-## Raw Meeting Notes
+---
 
-Use this section to capture unstructured notes during or immediately after the meeting.
+## Discovery Questions to Cover During the Meeting
+
+### 1. Business Context
+
+- What business domain does the dashboard cover?
+- Which business process, activity, team, product, or service should it support?
+- Why is this dashboard needed now?
+- What problem, pain point, or decision-making gap should it solve?
+- Is this a new dashboard or a replacement/improvement of an existing report?
+
+### 2. Dashboard Objective
+
+- What is the main purpose of the dashboard?
+- What should users understand immediately after opening it?
+- What decisions should the dashboard support?
+- What actions should users take based on the dashboard insights?
+- What would make this dashboard successful?
+
+### 3. Target Users
+
+- Who are the main users of the dashboard?
+- Are they executives, managers, operational users, analysts, or external stakeholders?
+- How often will they use it?
+- What level of detail do they need?
+- Do different user groups need different views or access levels?
+
+### 4. Business Questions
+
+- What key questions should the dashboard answer?
+- Which questions are the highest priority?
+- Which questions should be answered on the first page?
+- Which questions require detailed analysis?
+- What is explicitly out of scope?
+
+### 5. KPIs and Metrics
+
+- Which KPIs are mandatory?
+- Which metrics are optional?
+- Are KPI definitions already agreed?
+- Who owns or validates each KPI?
+- What is the expected calculation logic?
+- What time logic should be used?
+- Are targets, thresholds, benchmarks, or comparisons required?
+
+### 6. Data Sources
+
+- Which systems, databases, files, or tools contain the required data?
+- Who owns each data source?
+- How often is the data updated?
+- Is historical data available?
+- Are there known data quality issues?
+- Are there access, confidentiality, or GDPR constraints?
+
+### 7. Filters and Dimensions
+
+- Which filters should users have?
+- Which dimensions are required: date, country, region, product, client, team, status, category?
+- What should be the default view?
+- Are hierarchies, drill-downs, or drill-throughs required?
+- Should filters apply globally or only to specific pages?
+
+### 8. Visual and UX Expectations
+
+- Does the client have examples of dashboards they like?
+- Should the dashboard be executive, operational, exploratory, or detailed?
+- Are there corporate branding or design rules?
+- Are there preferred or forbidden visual types?
+- Are tables, exports, tooltips, comments, or explanations required?
+
+### 9. Interactions and Navigation
+
+- How many pages are expected?
+- Is an executive summary page needed?
+- Should users navigate from overview to detail?
+- Are bookmarks, drill-through pages, buttons, or custom tooltips required?
+- Should the dashboard be optimized for desktop, web, or mobile?
+
+### 10. Security and Access
+
+- Who should have access to the dashboard?
+- Are different access levels required?
+- Is row-level security needed?
+- Are there sensitive or confidential fields?
+- Should some metrics or pages be restricted?
+
+### 11. Delivery and Validation
+
+- Who will validate the dashboard?
+- Who gives final approval?
+- What is the expected deadline?
+- Are there fixed demo or delivery dates?
+- What are the acceptance criteria?
+- How many review iterations are expected?
+
+---
+
+## Raw Meeting Notes
 
 ```text
 [Paste raw notes here]
 ```
 
-## Transcript Excerpts
+---
 
-Use this section if a meeting transcript is available.
+## Transcript Excerpts
 
 ```text
 [Paste transcript excerpts here]
 ```
 
-## Mentioned Business Problems
+---
+
+## Quick Captures
+
+### Mentioned KPIs
 
 - 
 - 
 - 
 
-## Mentioned Dashboard Objectives
+### Mentioned Data Sources
 
 - 
 - 
 - 
 
-## Mentioned Target Users
-
-| User group | Notes |
-|---|---|
-| | |
-
-## Mentioned Business Questions
-
-| Business question | Context | Priority |
-|---|---|---|
-| | | High / Medium / Low |
-
-## Mentioned KPIs and Metrics
-
-| KPI / Metric | Context | Confirmed? |
-|---|---|---|
-| | | Yes / No / To be confirmed |
-
-## Mentioned Data Sources
-
-| Source | Type | Owner | Notes |
-|---|---|---|---|
-| | Database / File / System / Manual input | | |
-
-## Mentioned Filters and Dimensions
-
-| Filter / Dimension | Notes |
-|---|---|
-| Date | |
-| Country | |
-| Region | |
-| Product | |
-| Client | |
-| Team | |
-| Status | |
-| Category | |
-| Other | |
-
-## Visual Expectations Mentioned
+### Mentioned Filters or Dimensions
 
 - 
 - 
 - 
 
-## Interaction and Navigation Expectations
+### Visual Expectations
 
 - 
 - 
 - 
 
-## Security or Access Constraints
-
-- 
-- 
-- 
-
-## Decisions Made During the Meeting
+### Decisions Made
 
 | Decision | Confirmed by | Notes |
 |---|---|---|
 | | | |
 
-## Open Questions
+### Open Questions
 
 | Question | Owner | Priority |
 |---|---|---|
 | | | High / Medium / Low |
 
-## Risks and Constraints Mentioned
-
-| Risk / Constraint | Description | Impact |
-|---|---|---|
-| | | High / Medium / Low |
-
-## Follow-Up Actions
+### Follow-Up Actions
 
 | Action | Owner | Due date | Status |
 |---|---|---|---|
 | | | | Not started / In progress / Done |
 
-## Generative AI Prompt — Transform Raw Notes into Clean Summary
+---
 
-Use this prompt to transform raw notes or transcripts into a structured clean meeting summary.
+## Generative AI Prompt — Convert Raw Notes into a Clean Meeting Summary
 
 ```text
 You are a senior business analyst and Power BI consultant.
 
-I will provide raw meeting notes or a transcript from a client discovery meeting for a Power BI dashboard project.
+I will provide raw notes or a transcript from a discovery meeting for a Power BI dashboard project.
 
-Your task is to:
-1. Clean and structure the raw material.
-2. Preserve all important business information.
-3. Separate confirmed information from assumptions.
-4. Identify open questions and missing information.
-5. Avoid inventing details that were not mentioned.
-6. Prepare a structured clean meeting summary.
+Your task is to transform the raw material into a structured clean meeting summary.
 
-Important rules:
-- Do not add information that is not present in the notes.
+Rules:
+- Do not invent information.
 - If something is unclear, mark it as "To be confirmed".
-- Keep business wording clear and professional.
+- Preserve the stakeholder’s business intent.
+- Separate confirmed information from assumptions.
 - Separate KPIs from filters, dimensions, and data sources.
-- Preserve all open questions.
-- Highlight risks and constraints.
-- Identify the next actions needed before business framing.
+- Keep all open questions visible and actionable.
+- Highlight risks, constraints, and missing information.
+- Use clear and professional wording.
+- Prepare the output so it can be reused in the next workflow phase.
 
-Use the following output structure:
+Output structure:
 
 # Clean Meeting Summary
 
-## 1. Meeting context
-## 2. Business problem
-## 3. Dashboard objective
-## 4. Target users
-## 5. Expected decisions
-## 6. Requested dashboard pages or views
-## 7. Requested KPIs and metrics
-## 8. Mentioned data sources
-## 9. Filters and dimensions
-## 10. Visual preferences
-## 11. Interactions and navigation
-## 12. Security and access constraints
-## 13. Constraints and risks
-## 14. Confirmed decisions
+## 1. Meeting Context
+## 2. Business Problem
+## 3. Dashboard Objective
+## 4. Target Users
+## 5. Expected Decisions
+## 6. Requested Dashboard Pages or Views
+## 7. Requested KPIs and Metrics
+## 8. Mentioned Data Sources
+## 9. Filters and Dimensions
+## 10. Visual Preferences
+## 11. Interactions and Navigation
+## 12. Security and Access Constraints
+## 13. Constraints and Risks
+## 14. Confirmed Decisions
 ## 15. Assumptions
-## 16. Open questions
-## 17. Recommended next steps
+## 16. Open Questions
+## 17. Recommended Next Steps
 
 Raw material:
 [paste raw notes or transcript here]
 ```
 
-## Human Review Checklist
+---
 
-After using Generative AI, the analyst must verify that:
+## Next Step
 
-- no unsupported information was invented;
-- client wording was not distorted;
-- confirmed decisions are clearly separated from assumptions;
-- all open questions are preserved;
-- KPI names and business terms are accurate;
-- KPIs are not confused with dimensions or filters;
-- sensitive information is removed or anonymized if needed;
-- risks and constraints are clearly documented;
-- the output is ready to be copied into `clean_meeting_summary_template.md`.
+Use this raw material and the Generative AI prompt to create:
 
-## Expected Output
-
-This document should provide enough source material to create:
-
-- `clean_meeting_summary_template.md`;
-- the Business Framing phase;
-- the first list of dashboard requirements and open questions.
+- `clean_meeting_summary_template.md`
