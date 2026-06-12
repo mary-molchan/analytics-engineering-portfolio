@@ -1,4 +1,4 @@
-##  Spec-Driven Workflow for Power BI Dashboard Creation (EN version)
+# Spec-Driven Workflow for Power BI Dashboard Creation — EN
 
 ![Project](https://img.shields.io/badge/Project-Spec_Driven_Workflow-7B61FF?style=for-the-badge)
 ![Scope](https://img.shields.io/badge/Scope-End_to_End_Workflow-blue?style=for-the-badge)
@@ -47,23 +47,6 @@ The final output is a **validated, traceable, build-ready Power BI specification
 
 ---
 
-## Generative AI Role Across the Workflow
-
-Generative AI is used as a workflow accelerator, not as an autonomous decision-maker.  
-It helps structure information, draft documentation, identify gaps, and prepare reusable project artifacts.  
-The Analytics Engineer remains responsible for validation, business alignment, technical feasibility, and final approval.
-
-| Workflow area | GenAI contribution | Analytics Engineer responsibility |
-|---|---|---|
-| Discovery | Structures meeting notes, transcripts, and stakeholder input into a clean summary. | Validate that the summary reflects the real client conversation and does not turn assumptions into facts. |
-| Business framing | Converts discovery output into a business-oriented dashboard brief. | Confirm the business objective, target users, supported decisions, scope, and expected value. |
-| Requirements | Drafts structured client requirements from the validated business brief. | Check that requirements are specific, realistic, and supported by confirmed business needs. |
-| KPI definition | Extracts and structures KPIs, metrics, owners, definition status, and validation needs. | Confirm KPI definitions with business owners and mark missing formulas, owners, or data logic as `To be confirmed`. |
-| Dashboard design | Supports the creation of dashboard structure, user journey, visual components, charts, tables, matrices, and UX rules. | Ensure that each page and visual supports a real business question and remains feasible for Power BI implementation. |
-| Build readiness | Helps prepare the build readiness package, implementation backlog, validation checks, blockers, and client confirmation message. | Assess technical feasibility, validate data/model readiness, approve the Go / Conditional Go / No-Go decision, and confirm readiness before development starts. |
-
----
-
 ## Business Workflow Diagram
 
 ```mermaid
@@ -90,23 +73,22 @@ flowchart TD
     end
 
     subgraph P4[Phase 4 — Dashboard design]
-        H --> K[Functional specification]
-        I --> K
-        K --> L[Dashboard structure and user journey]
-        L --> M[Visual design specification]
-    end
+    H --> K[Dashboard design specification]
+    I --> K
+    K --> L[Dashboard structure and user journey]
+    L --> M[Visual design specification]
+end
 
-    subgraph P5[Phase 5 — Build readiness]
-        L --> N[Technical Power BI specification]
-        M --> O[Build backlog]
-        N --> O
-        O --> P[Pre-build validation review]
-        P --> Q{Ready to build?}
-        Q -->|Yes| R[Client confirmation]
-        Q -->|No| S[Clarify or rework requirements]
-        S --> H
-        R --> T[Power BI build phase]
-    end
+subgraph P5[Phase 5 — Build readiness]
+    K --> N[Build readiness package]
+    M --> N
+    N --> P[Pre-build validation review]
+    P --> Q{Ready to build?}
+    Q -->|Yes| R[Client confirmation message]
+    Q -->|No| S[Clarify or rework requirements]
+    S --> H
+    R --> T[Power BI build phase]
+end
 ```
 
 ---
@@ -203,7 +185,7 @@ The final output of this workflow is a **build-ready Power BI specification pack
 - a dashboard business brief;
 - a client requirements specification;
 - a KPI dictionary;
-- dashboard design documentation;
-- technical Power BI preparation;
-- a build backlog;
-- pre-build validation and client confirmation.
+- a dashboard design specification;
+- a visual design specification;
+- a build readiness package;
+- a client confirmation message before the Power BI build phase.
