@@ -59,23 +59,6 @@ The final output is a **validated, traceable, release-ready Snowflake SQL proced
 
 ---
 
-## Generative AI Role Across the Workflow
-
-Generative AI is used as a workflow accelerator, not as an autonomous SQL developer.  
-It helps structure requirements, draft specifications, generate first-pass code, identify gaps, and prepare review artifacts.  
-The Data Engineer remains responsible for technical feasibility, SQL correctness, data safety, testing, and final approval.
-
-| Workflow area | GenAI contribution | Data Engineer responsibility |
-|---|---|---|
-| Requirement discovery | Structures the initial request into a clear SQL request brief. | Validate the real need, clarify scope, confirm expected outcome, and identify missing information. |
-| Data contract and mapping | Drafts source-to-target mapping, source dependencies, joins, filters, and transformation rules. | Confirm sources, fields, grain, data types, join logic, and target structure. |
-| Procedure logic design | Converts requirements and mapping into a stored procedure execution design. | Validate load strategy, idempotency, object checks, error handling, logging, and transaction behavior. |
-| SQL implementation | Generates a first Snowflake SQL / Snowflake Scripting stored procedure. | Review, correct, optimize, and approve the script before execution. |
-| SQL review and hardening | Checks the script for correctness, unsafe logic, duplicates, performance issues, and maintainability risks. | Decide which changes are required, apply corrections, and confirm readiness for validation. |
-| Validation and release readiness | Creates validation scenarios, deployment checks, rollback considerations, and readiness assessment. | Execute or supervise tests, confirm results, validate access, and approve deployment or rework. |
-
----
-
 ## Engineering Workflow Diagram
 
 ```mermaid
