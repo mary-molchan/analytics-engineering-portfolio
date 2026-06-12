@@ -86,16 +86,17 @@ The goal of this project is to reduce ambiguity, prevent unnecessary rework, imp
 │
 ├── 04_dashboard_design/
 │   ├── README.md
-│   ├── functional_specification_template.md
-│   ├── dashboard_structure_template.md
-│   └── visual_design_specification_template.md
+│   ├── 01_gen_ai_prompt_create_dashboard_design_specification.md
+│   ├── 02_dashboard_design_specification_template.md
+│   ├── 03_gen_ai_prompt_create_visual_design_specification.md
+│   └── 04_visual_design_specification_template.md
 │
 ├── 05_build_readiness/
 │   ├── README.md
-│   ├── technical_powerbi_specification_template.md
-│   ├── build_backlog_template.md
-│   ├── pre_build_validation_checklist.md
-│   └── client_confirmation_message_template.md
+│   ├── 01_gen_ai_prompt_create_build_readiness_package.md
+│   ├── 02_build_readiness_package_template.md
+│   ├── 03_gen_ai_prompt_create_client_confirmation_message.md
+│   └── 04_client_confirmation_message_template.md
 │
 └── README.md
 ```
@@ -148,7 +149,23 @@ The final output of this workflow is a **build-ready Power BI specification pack
 - a build backlog;
 - pre-build validation and client confirmation.
 
-## Workflow Diagram
+## Business Workflow Summary
+
+The workflow diagram below represents the **business logic of the dashboard delivery process**.
+
+It shows how an initial dashboard request is progressively transformed into a build-ready Power BI specification package. The diagram focuses on the main business artifacts, validation steps, and decision points. It does not show every Generative AI prompt file, because prompts are used as operational tools to create, structure, or review the main artifacts.
+
+| Phase | Business role in the workflow |
+|---|---|
+| **Phase 1 — Discovery** | Captures the initial client request, meeting notes, transcripts, and stakeholder input, then turns them into a clean meeting summary. |
+| **Phase 2 — Business Framing** | Clarifies why the dashboard is needed, who will use it, what decisions it should support, and which business questions it must answer. |
+| **Phase 3 — Requirements & KPI** | Translates the business brief into structured client requirements and a KPI dictionary, including filters, dimensions, metric definitions, risks, and open questions. |
+| **Phase 4 — Dashboard Design** | Defines how the dashboard should be structured and experienced by users: pages, user journey, visual components, charts, tables, matrices, interactions, and visual design principles. |
+| **Phase 5 — Build Readiness** | Converts the validated design into a developer-oriented build readiness package, including technical preparation, implementation backlog, validation checks, blockers, and client confirmation. |
+
+The final output is a **validated, traceable, build-ready Power BI specification package** that can be used to start the actual Power BI development phase with reduced ambiguity and stronger business alignment.
+
+## Business Workflow Diagram
 
 ```mermaid
 flowchart TD
