@@ -4,7 +4,7 @@
 
 This document defines the functional and structural design of the Power BI dashboard before visual design and build preparation.
 
-It describes dashboard pages, user journey, KPI placement, filters, interactions, and functional behavior.
+It describes dashboard pages, user journey, KPI placement, expected visual components, tables, matrices, charts, filters, interactions, and functional behavior.
 
 ---
 
@@ -25,7 +25,7 @@ It describes dashboard pages, user journey, KPI placement, filters, interactions
 ## 2. Dashboard Design Objective
 
 ```text
-[Summarize how the dashboard structure supports users, business questions, decisions, and KPI monitoring.]
+[Summarize how the dashboard structure supports users, business questions, decisions, KPI monitoring, detailed analysis, and operational follow-up.]
 ```
 
 ---
@@ -41,7 +41,7 @@ It describes dashboard pages, user journey, KPI placement, filters, interactions
 ## 4. User Journey
 
 ```text
-[Describe how users move from overview to insights, details, filtering, and decision-making.]
+[Describe how users move from overview to KPIs, trends, comparisons, detailed analysis, filtering, and decision-making.]
 ```
 
 ---
@@ -56,21 +56,37 @@ It describes dashboard pages, user journey, KPI placement, filters, interactions
 
 ## 6. Page-Level Design Specification
 
-| Page ID | Main KPIs / Metrics | Main dimensions | Filters / slicers | Main interactions | Notes |
-|---|---|---|---|---|---|
-| PAGE-01 | | | | | |
+| Page ID | Main KPIs / Metrics | Main dimensions | Filters / slicers | Expected visual components | Main interactions | Notes |
+|---|---|---|---|---|---|---|
+| PAGE-01 | | | | KPI cards / Charts / Tables / Matrix / Map / Slicers / Tooltips / Other | | |
 
 ---
 
-## 7. KPI Placement Logic
+## 7. Analytical Visual Requirements
 
-| KPI ID | KPI / Metric | Recommended page | Business question supported | Placement rationale |
+| Page ID | Analytical need | Recommended visual family | Business reason | Status |
 |---|---|---|---|---|
-| KPI-001 | | | | |
+| PAGE-01 | | KPI monitoring / Trend analysis / Comparison / Ranking / Detailed records / Cross-tab analysis / Geographic analysis / Variance analysis / Root cause exploration / Distribution analysis | | Confirmed / To be confirmed |
 
 ---
 
-## 8. Filters, Slicers, and Dimensions
+## 8. KPI and Metric Placement Logic
+
+| KPI ID | KPI / Metric | Recommended page | Expected visual role | Business question supported | Placement rationale |
+|---|---|---|---|---|---|
+| KPI-001 | | PAGE-01 | KPI card / Trend chart / Comparison chart / Table column / Matrix value / Tooltip detail / Status indicator | | |
+
+---
+
+## 9. Tables and Matrices Requirements
+
+| Page ID | Table / Matrix purpose | Required fields or dimensions | Level of detail | Export needed? | Status |
+|---|---|---|---|---|---|
+| PAGE-01 | | | Summary / Detail / Transaction-level / Entity-level | Yes / No / To be confirmed | Confirmed / To be confirmed |
+
+---
+
+## 10. Filters, Slicers, and Dimensions
 
 | Filter / Dimension | Scope | Applies to | Default behavior | Status |
 |---|---|---|---|---|
@@ -78,7 +94,7 @@ It describes dashboard pages, user journey, KPI placement, filters, interactions
 
 ---
 
-## 9. Navigation and Interactions
+## 11. Navigation and Interactions
 
 | Interaction | Purpose | Applies to | Required? | Status |
 |---|---|---|---|---|
@@ -89,10 +105,11 @@ It describes dashboard pages, user journey, KPI placement, filters, interactions
 | Tooltips | | | Yes / No / To be confirmed | |
 | Reset filters | | | Yes / No / To be confirmed | |
 | Export | | | Yes / No / To be confirmed | |
+| Glossary / Help page | | | Yes / No / To be confirmed | |
 
 ---
 
-## 10. Functional Behavior
+## 12. Functional Behavior
 
 | Topic | Expected behavior | Status |
 |---|---|---|
@@ -102,10 +119,11 @@ It describes dashboard pages, user journey, KPI placement, filters, interactions
 | Comparison logic | | To be confirmed |
 | Detail access | | To be confirmed |
 | Restricted views | | To be confirmed |
+| Export behavior | | To be confirmed |
 
 ---
 
-## 11. Design Assumptions
+## 13. Design Assumptions
 
 | Assumption | Reason | Needs confirmation? |
 |---|---|---|
@@ -113,7 +131,7 @@ It describes dashboard pages, user journey, KPI placement, filters, interactions
 
 ---
 
-## 12. Design Risks and Constraints
+## 14. Design Risks and Constraints
 
 | Risk / Constraint | Description | Impact | Required action |
 |---|---|---|---|
@@ -121,7 +139,7 @@ It describes dashboard pages, user journey, KPI placement, filters, interactions
 
 ---
 
-## 13. Open Design Questions
+## 15. Open Design Questions
 
 | Question | Related page / feature | Owner | Priority | Blocking? |
 |---|---|---|---|---|
@@ -129,7 +147,7 @@ It describes dashboard pages, user journey, KPI placement, filters, interactions
 
 ---
 
-## 14. Readiness Assessment
+## 16. Readiness Assessment
 
 | Item | Assessment |
 |---|---|
