@@ -13,7 +13,7 @@ The goal is to clarify the business purpose of the future Power BI dashboard bef
 Use this prompt with the completed output from:
 
 ```text
-../01_discovery/05_clean_meeting_summary_template.md
+../02_discovery/05_clean_meeting_summary_template.md
 ```
 
 The input should contain:
