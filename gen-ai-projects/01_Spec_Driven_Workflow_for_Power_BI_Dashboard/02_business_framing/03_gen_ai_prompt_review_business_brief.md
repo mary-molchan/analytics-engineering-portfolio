@@ -12,11 +12,7 @@ This prompt does not create a new project artifact. It produces review feedback 
 
 ## Input
 
-Use this prompt with the completed document:
-
-```text
-[`02_dashboard_business_brief_template.md`](./02_dashboard_business_brief_template.md)
-```
+Use this prompt with the completed document: [`02_dashboard_business_brief_template.md`](./02_dashboard_business_brief_template.md)
 
 The input should contain:
 
@@ -42,9 +38,7 @@ The output is a **Business Brief Review Report**.
 
 Use the review feedback to update and validate:
 
-```text
 [`02_dashboard_business_brief_template.md`](./02_dashboard_business_brief_template.md)
-```
 
 ---
 
@@ -182,7 +176,7 @@ Type can be:
 
 ## 12. Recommended Corrections
 
-Provide a concise list of corrections to apply to [`02_dashboard_business_brief_template.md`](./02_dashboard_business_brief_template.md).
+Provide a concise list of corrections to apply to [`02_dashboard_business_brief_template.md`](./02_dashboard_business_brief_template.md)
 
 ## 13. Final Recommendation
 
