@@ -6,7 +6,7 @@ This prompt is used to review the completed Dashboard Business Brief before movi
 
 The goal is to check whether the business framing is clear, complete, consistent, and ready to support detailed requirements and KPI definition.
 
-This prompt does not create a new project artifact. It produces review feedback that should be used to improve `02_dashboard_business_brief_template.md`.
+This prompt does not create a new project artifact. It produces review feedback that should be used to improve [`02_dashboard_business_brief_template.md`](./02_dashboard_business_brief_template.md).
 
 ---
 
@@ -15,7 +15,7 @@ This prompt does not create a new project artifact. It produces review feedback 
 Use this prompt with the completed document:
 
 ```text
-02_dashboard_business_brief_template.md
+[`02_dashboard_business_brief_template.md`](./02_dashboard_business_brief_template.md)
 ```
 
 The input should contain:
@@ -43,7 +43,7 @@ The output is a **Business Brief Review Report**.
 Use the review feedback to update and validate:
 
 ```text
-02_dashboard_business_brief_template.md
+[`02_dashboard_business_brief_template.md`](./02_dashboard_business_brief_template.md)
 ```
 
 ---
@@ -182,7 +182,7 @@ Type can be:
 
 ## 12. Recommended Corrections
 
-Provide a concise list of corrections to apply to `02_dashboard_business_brief_template.md`.
+Provide a concise list of corrections to apply to [`02_dashboard_business_brief_template.md`](./02_dashboard_business_brief_template.md).
 
 ## 13. Final Recommendation
 
