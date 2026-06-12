@@ -1,4 +1,9 @@
-# Phase 5 — Build Readiness
+# Phase 5. Build Readiness.
+
+![Phase](https://img.shields.io/badge/Phase_5-Build_Readiness-DC143C?style=for-the-badge)
+![Focus](https://img.shields.io/badge/Focus-Implementation_Readiness-blue?style=for-the-badge)
+![GenAI](https://img.shields.io/badge/GenAI-Assisted-purple?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Workflow_Phase-green?style=for-the-badge)
 
 ## Purpose
 
