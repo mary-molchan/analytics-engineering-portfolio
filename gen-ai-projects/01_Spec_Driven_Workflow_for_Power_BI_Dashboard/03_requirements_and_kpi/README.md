@@ -23,15 +23,6 @@ Validated Dashboard Business Brief
 → Input for Dashboard Design phase
 ```
 
-| Step | What it means |
-|---|---|
-| Validated Dashboard Business Brief | Input from Phase 2: [`../02_business_framing/02_dashboard_business_brief_template.md`](../02_business_framing/02_dashboard_business_brief_template.md). It defines the dashboard business purpose, users, supported decisions, scope, and expected value. |
-| GenAI prompt to create client requirements specification | [`01_gen_ai_prompt_create_client_requirements_specification.md`](./01_gen_ai_prompt_create_client_requirements_specification.md) is applied to the validated business brief to transform business framing into structured client requirements. |
-| Client Requirements Specification | [`02_client_requirements_specification_template.md`](./02_client_requirements_specification_template.md) is the first main artifact of this phase. It documents user needs, business questions, functional requirements, expected pages, filters, dimensions, constraints, and open questions. |
-| GenAI prompt to create KPI dictionary | [`03_gen_ai_prompt_create_kpi_dictionary.md`](./03_gen_ai_prompt_create_kpi_dictionary.md) is applied to the completed client requirements specification to extract and structure KPIs and metrics. |
-| KPI Dictionary | [`04_kpi_dictionary_template.md`](./04_kpi_dictionary_template.md) is the second main artifact of this phase. It documents KPI business meaning, definition status, granularity, time logic, ownership, source dependency, validation issues, and open questions. |
-| Input for Dashboard Design phase | The validated requirements specification and KPI dictionary become the input for [`../04_dashboard_design/`](../04_dashboard_design/). |
-
 ---
 
 ## What This Phase Covers
