@@ -1,4 +1,4 @@
-# Projet Snowflake SQL - Pipeline Apporteurs (version portfolio)
+# Projet Snowflake SQL - Pipeline Apporteurs.  Version anonymisée pour portfolio public.
 
 ## Vue d'ensemble
 Ce projet presente une implementation SQL industrialisee pour le pilotage des indicateurs apporteurs dans Snowflake: calcul des collectes/decollectes, consolidation des encours et orchestration complete du traitement.
