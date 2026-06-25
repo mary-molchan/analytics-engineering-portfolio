@@ -66,9 +66,7 @@ Dans le secteur financier, ce type de dispositif est important car il permet de 
 
 ## Documentation du script
 
-- [`DATA_DICTIONARY.xlsx`](DATA_DICTIONARY.xlsx) : Dictionnaire exhaustif des 169 colonnes des 9 tables sources avec descriptions, types, rôles (PK/FK/BK)
-- [`SEMANTIC_MODEL_POWERBI.xlsx`](SEMANTIC_MODEL_POWERBI.xlsx) : Spécification du modèle sémantique (9 tables, 19 relations actives, 6 rôles de date, 8 mesures DAX, règles de gouvernance)
-- [`SEMANTIC_MODEL_POWERBI.drawio`](SEMANTIC_MODEL_POWERBI.drawio) : Diagramme ERD visuel (dimensions bleu, faits orange, 19 relations actives + 5 relations optionnelles)
+
 
 ## Fichiers de données
 
