@@ -1,4 +1,4 @@
-# Projet Snowflake SQL - Pipeline Analytics Financière Courtiers (version portfolio)
+# Projet Snowflake SQL - Pipeline Analytics Financière Courtiers
 
 ## Vue d'ensemble
 
