@@ -1,4 +1,4 @@
-# Projet Snowflake SQL - Reporting Adherents Courtiers (version portfolio)
+# Projet Snowflake SQL - Reporting Adherents Courtiers. Version anonymisée pour portfolio public.
 
 ## Vue d'ensemble
 Ce projet presente une implementation SQL industrialisee pour alimenter un reporting adherents centre sur le perimetre des courtiers dans Snowflake. Il repose sur une procedure stockee chargeant une table physique de synthese a partir des donnees contrat, adherent, convocation et courtier, avec une logique incrementalisee et une fenetre historique maitrisee.
