@@ -8,7 +8,7 @@ Ce dossier contient des projets axés sur SQL et Snowflake, portant notamment su
 
 | Projet | Description | Objectif principal |
 |---|---|---|
-| [`Projet_Snowflake_SQL_Pipeline_Apporteurs`](Projet_Snowflake_SQL_Pipeline_Apporteurs/) | Pipeline SQL séquentiel comprenant des étapes d'initialisation, de calcul, de collecte et d'orchestration. | Pipeline SQL, procédures stockées, orchestration |
+| [`Pipeline SQL DataPrep sur les apporteurs`](Projet_Snowflake_SQL_Pipeline_Apporteurs/) | Pipeline SQL séquentiel comprenant des étapes d'initialisation, de calcul, de collecte et d'orchestration. | Pipeline SQL, procédures stockées, orchestration |
 | [`Projet_Snowflake_SQL_Reporting_Adherents_Courtiers`](Projet_Snowflake_SQL_Reporting_Adherents_Courtiers/) | Projet de reporting SQL axé sur les adhérents, les courtiers et la logique de reporting orientée métier. | Rapports, requêtes analytiques, préparation des données |
 
 ---
