@@ -64,7 +64,7 @@ Le code suit une séquence d’exécution standardisée, depuis l’initialisati
 
 | Étape | Script | Description |
 |---|---|---|
-| 1 | [`sql/Script_Reporting_Adherents_Courtiers.sql`](sql/Script_Reporting_Adherents_Courtiers.sql) | Procédure SQL de reporting adhérents courtiers : création de la table cible, nettoyage de l’historique, normalisation des sources, chargement incrémental et contrôles qualité. |
+| 1 | [`Script_Reporting_Adherents_Courtiers`](sql/Script_Reporting_Adherents_Courtiers.sql) | Procédure SQL de reporting adhérents courtiers : création de la table cible, nettoyage de l’historique, normalisation des sources, chargement incrémental et contrôles qualité. |
 
 ## 📚 Documentation
 
