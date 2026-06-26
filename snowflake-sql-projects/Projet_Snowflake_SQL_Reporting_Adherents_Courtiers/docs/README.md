@@ -1,175 +1,118 @@
-# Modele de specification SQL (format tableau)
+# Spécification technique : Pipeline SQL de reporting adhérents courtiers
 
-## En-tete
+## 🔒 Confidentialité et adaptation publique
 
-| Titre | EPIN / Ticket | GitLab / Repo | Date de creation | Developpeur | Responsable du projet | Description fonctionnelle |
-|---|---|---|---|---|---|---|
-| Specification technique - Reporting Adherents Courtiers | N/A | A completer | 2026-06-10 | A completer | A completer | Procedure stockee de rafraichissement de la table de reporting adherents du perimetre courtiers |
+Ce document décrit une **version anonymisée et adaptée pour démonstration publique** d’une procédure stockée SQL Snowflake intégrée au projet **Pipeline SQL de reporting adhérents courtiers**. Aucune dénomination réelle n’est exposée : **ni base de données interne, ni schéma réel, ni table réelle, ni warehouse, ni référentiel métier sensible**. Les noms techniques, objets sources, codes de périmètre, labels métier et exemples ont été remplacés par des appellations génériques afin de préserver strictement la confidentialité des systèmes et des données internes.
 
-## Identification du script
+---
 
-| Champ | Valeur |
-|---|---|
-| Nom du script SQL | Report adherents.sql |
-| Type de script | Procedure stockee |
-| Nom objet principal (DB.Schema.Object) | BD_ASSURANCE_DEMO.SC_PILOTAGE_COURTIERS.PS_RAFRAICHIR_ADHERENTS_COURTIERS |
-| Environnement cible | Dev / Test / Prod |
-| Statut document | En revue |
-| Confidentialite | Interne (version anonymisee/deanonimisee pour demonstration technique) |
+## 🗂️ Identification du script
 
-## Architecture technique
+Cette section identifie la procédure stockée, son rôle dans le projet et son périmètre fonctionnel.
 
 | Champ | Valeur |
 |---|---|
-| Base de donnees | BD_ASSURANCE_DEMO |
-| Schema de stockage | SC_PILOTAGE_COURTIERS |
-| Warehouse / Compute | WH_ANALYSE_PARTAGE |
-| Source(s) des donnees initiales (tables/views) | LAC_DONNEES_DEMO.PRD_ASSURANCE_DEMO.V_CONTRAT, BD_INTEG_DEMO.SC_DIFFUSION_ASSURANCE.V_ADHERENT, BD_INTEG_DEMO.SC_DIFFUSION_ASSURANCE.V_CONVOCATION, BD_INTEG_DEMO.SC_DIFFUSION_ASSURANCE.R_COURTIER |
-| Langage (SQL, JavaScript) | SQL |
-| Dependances (objets appeles) | Table cible RPT_ADHERENTS_COURTIERS; vues/sources contrat, adherent, convocation et courtier |
+| **Projet** | Pipeline SQL de reporting adhérents courtiers |
+| **Script SQL** | [`Script_Reporting_Adherents_Courtiers.sql`](../sql/Script_Reporting_Adherents_Courtiers.sql) |
+| **Type de script** | Procédure stockée SQL |
+| **Nom de la procédure** | `PS_RAFRAICHIR_ADHERENTS_COURTIERS` |
+| **Technologie principale** | Snowflake SQL |
+| **Objet principal** | Rafraîchissement d’une table physique de reporting adhérents sur le périmètre courtiers |
+| **Table cible** | `RPT_ADHERENTS_COURTIERS` |
+| **Statut du document** | Version portfolio public |
+| **Objectif fonctionnel** | Alimenter une table de synthèse fiable et historisée pour le reporting des adhérents rattachés au périmètre courtiers, avec chargement incrémental, contrôle des partitions et normalisation des données sources. |
 
-## Parametres d entree
+---
 
-| Champ | Valeur |
+## 🏗️ Architecture technique
+
+L’architecture repose sur une procédure stockée dédiée au rafraîchissement d’une table physique de reporting, afin d’éviter les recalculs permanents côté BI.
+
+| Élément | Description |
 |---|---|
-| Nom | Aucun |
-| Type de donnees | N/A |
-| Obligatoire (Oui / Non) | N/A |
-| Valeur par defaut | N/A |
-| Description | La procedure ne prend aucun parametre; la logique de perimetre temporel est calculee dynamiquement a l'execution |
-| Exemple d appel de procedure / requete | CALL BD_ASSURANCE_DEMO.SC_PILOTAGE_COURTIERS.PS_RAFRAICHIR_ADHERENTS_COURTIERS(); |
+| **Couche source** | Vues et référentiels relatifs aux contrats, adhérents, convocations et courtiers. |
+| **Couche de normalisation** | CTE de stabilisation des sources afin de limiter les doublons et standardiser les données avant jointure. |
+| **Couche cible** | Table physique `RPT_ADHERENTS_COURTIERS` alimentée uniquement sur les partitions utiles. |
+| **Mode d’exécution** | Appel d’une procédure stockée sans paramètre. |
+| **Stratégie temporelle** | Fenêtre historique glissante de 5 ans avec purge dynamique des partitions obsolètes. |
+| **Stratégie d’alimentation** | Chargement incrémental par `CLE_PARTITION`, avec insertion uniquement des partitions absentes de la table cible. |
 
-### Tableau detaille des parametres (si plusieurs)
+### Objets techniques principaux
 
-| Nom parametre | Type | Obligatoire | Defaut | Description metier/technique |
-|---|---|---|---|---|
-| N/A | N/A | N/A | N/A | Procedure sans parametre d'entree |
-
-## Donnees de sortie
-
-| Champ | Type de donnees | Description des donnees |
-|---|---|---|
-| ID_ADHERENT | VARCHAR | Identifiant metier unique de l'adherent |
-| LIB_CIVILITE | VARCHAR | Civilite normalisee issue du code source |
-| NOM_ADHERENT | VARCHAR | Nom de l'adherent |
-| PRENOM_ADHERENT | VARCHAR | Prenom de l'adherent |
-| ADRESSE_LIGNE_1 | VARCHAR | Adresse principale |
-| COMPLEMENT_ADRESSE | VARCHAR | Complement d'adresse |
-| VILLE | VARCHAR | Ville de l'adherent |
-| CODE_POSTAL | VARCHAR | Code postal valide sur 5 chiffres |
-| CODE_DEPARTEMENT | VARCHAR | Code departement derive du code postal |
-| COMMUNE | VARCHAR | Commune issue de la convocation |
-| EMAIL_ADHERENT | VARCHAR | Adresse email de l'adherent |
-| IND_EMAIL_PRESENT | VARCHAR | Indicateur Oui/Non de presence email |
-| TELEPHONE_ADHERENT | VARCHAR | Telephone adherent |
-| NUMERO_CONTRAT | VARCHAR | Numero du contrat |
-| TYPE_PRODUIT | VARCHAR | Type/famille de produit |
-| LIB_PRODUIT_ASSURANCE | VARCHAR | Libelle produit assurance |
-| DATE_EFFET_CONTRAT | DATE | Date d'effet du contrat |
-| DATE_FIN_CONTRAT | DATE | Date de fin du contrat |
-| STATUT_CONTRAT | VARCHAR | Statut du contrat |
-| ORIGINE_CONTRAT | VARCHAR | Origine/canal du contrat |
-| NOM_COURTIER | VARCHAR | Nom du courtier associe |
-| EMAIL_COURTIER | VARCHAR | Email du courtier |
-| TELEPHONE_COURTIER | VARCHAR | Telephone prioritaire du courtier |
-| INDICATEUR_NPAI | VARCHAR | Indicateur courrier non distribuable |
-| BUREAU_DISTRIBUTION | VARCHAR | Bureau/agence de distribution |
-| CODE_PERIMETRE | VARCHAR | Code de perimetre fixe: PERIM_COURTIER_ASTER |
-| CLE_PARTITION | VARCHAR | Cle de partition AAAAMM |
-| DATE_DERNIER_RAFRAICHISSEMENT | DATE | Date de chargement dans la table cible |
-
-## Sources de donnees
-
-| Source ID | Objet source (DB.Schema.Table/View) | Type | Criticite | Proprietaire |
-|---|---|---|---|---|
-| SRC-001 | LAC_DONNEES_DEMO.PRD_ASSURANCE_DEMO.V_CONTRAT | Vue | Haute | A completer |
-| SRC-002 | BD_INTEG_DEMO.SC_DIFFUSION_ASSURANCE.V_ADHERENT | Vue | Haute | A completer |
-| SRC-003 | BD_INTEG_DEMO.SC_DIFFUSION_ASSURANCE.V_CONVOCATION | Vue | Moyenne | A completer |
-| SRC-004 | BD_INTEG_DEMO.SC_DIFFUSION_ASSURANCE.R_COURTIER | Table/Referentiel | Moyenne | A completer |
-| SRC-005 | BD_ASSURANCE_DEMO.SC_PILOTAGE_COURTIERS.RPT_ADHERENTS_COURTIERS | Table cible | Haute | A completer |
-
-## Logique de l implementation du script
-
-1. Initialiser le contexte de session (warehouse, database, schema, casse des identifiants).
-2. Creer la table cible `RPT_ADHERENTS_COURTIERS` si elle n'existe pas avec le schema de sortie.
-3. Supprimer les partitions de la cible qui sortent du perimetre historique dynamique de 5 ans.
-4. Construire `src_adherent` avec une normalisation a une ligne par `NUMADHERENT` et filtrage qualite des codes postaux.
-5. Construire `src_convocation` a une ligne par adherent (`N_ADH`) pour limiter les duplications.
-6. Construire `src_courtier` a une ligne par `CDINTERMEDIAIRE` pour stabiliser le referentiel courtier.
-7. Inserer les partitions absentes de la cible uniquement, via `NOT EXISTS` sur `CLE_PARTITION`.
-8. Enrichir les donnees contrat avec les informations adherent, convocation et courtier, puis taguer le `CODE_PERIMETRE`.
-9. Retourner un message applicatif de succes avec timestamp d'execution.
-
-## Regles de calcul / transformation
-
-| Regle ID | Description regle | Entrees | Sortie impactee |
-|---|---|---|---|
-| R-001 | Civilite normalisee: `01 -> M.` et `02 -> MME`, sinon NULL | V_ADHERENT.CDCIVILITE | LIB_CIVILITE |
-| R-002 | Presence email derivee en `Oui/Non` selon nullite ou vide | V_ADHERENT.EMAIL | IND_EMAIL_PRESENT |
-| R-003 | Telephone courtier priorise sur le fixe, puis mobile | R_COURTIER.TELFIXE, TELMOBILE | TELEPHONE_COURTIER |
-| R-004 | Code departement derive des 2 premiers caracteres du code postal | V_ADHERENT.CDPOSTAL | CODE_DEPARTEMENT |
-| R-005 | Filtre qualite: seulement codes postaux a 5 chiffres et departements `01` a `98` | V_ADHERENT.CDPOSTAL | Perimetre insere |
-| R-006 | Code perimetre fixe pour segmentation aval | Constante | CODE_PERIMETRE |
-| R-007 | Incrementalite par partition: insertion uniquement si `CLE_PARTITION` absente en cible | V_CONTRAT.DT_PARTITION + table cible | Perimetre charge |
-
-## Gestion des erreurs
-
-| Cas d erreur | Detection | Action | Message retourne |
-|---|---|---|---|
-| Source inaccessible ou objet absent | Erreur SQL lors d'un `SELECT`/`JOIN` | Arret de la procedure | Message d'erreur Snowflake |
-| Echec DDL cible | Erreur SQL sur `CREATE TABLE IF NOT EXISTS` | Arret de la procedure | Message d'erreur Snowflake |
-| Echec DML suppression/insertion | Erreur SQL sur `DELETE` ou `INSERT` | Arret de la procedure | Message d'erreur Snowflake |
-| Donnees non conformes code postal | Filtre qualite SQL | Exclusion des lignes non conformes | Pas de message specifique; lignes ignorees |
-| Execution nominale | Fin sans erreur | Retour succes | `Rafraichissement termine : <timestamp>` |
-
-## Performance
-
-| Champ | Valeur |
+| Objet | Rôle |
 |---|---|
-| Volumetrie estimee | A completer selon volumetrie contrat/adherent |
-| Temps d execution cible | A completer |
-| Strategie incrementalite / partitionnement | Chargement incremental par `CLE_PARTITION`; purge dynamique des partitions hors fenetre |
-| Points de vigilance performance | `SELECT DISTINCT DT_PARTITION`, CTE de normalisation avec `MAX`, jointures sur referentiels et absence d'index logique sur sources volumineuses |
+| `PS_RAFRAICHIR_ADHERENTS_COURTIERS` | Procédure stockée principale de rafraîchissement du reporting. |
+| `RPT_ADHERENTS_COURTIERS` | Table cible de reporting adhérents courtiers. |
+| `src_adherent` | CTE de normalisation des données adhérents. |
+| `src_convocation` | CTE de normalisation des données de convocation. |
+| `src_courtier` | CTE de stabilisation du référentiel courtier. |
+| `CLE_PARTITION` | Clé technique de partition au format `AAAAMM`. |
 
-## Securite et conformite
+---
 
-| Champ | Valeur |
+## 📥 Sources de données
+
+La procédure mobilise plusieurs sources anonymisées afin de consolider les informations relatives aux contrats, aux adhérents, aux convocations et aux courtiers.
+
+| Source | Rôle fonctionnel |
 |---|---|
-| Donnees sensibles traitees | Oui |
-| Mecanismes de protection (masquage/anonymisation) | Noms d'objets et labels internes anonymises; aucune denomination reelle d'infrastructure conservee |
-| Principe du moindre privilege applique | A confirmer |
-| Journalisation / audit | Journalisation minimale via message de retour et date de rafraichissement par ligne |
+| `V_CONTRAT` | Source principale des contrats et partitions de reporting. |
+| `V_ADHERENT` | Source des informations adhérents : identité, adresse, email, téléphone et code postal. |
+| `V_CONVOCATION` | Source complémentaire permettant d’enrichir les données avec la commune ou des informations de convocation. |
+| `R_COURTIER` | Référentiel des courtiers, utilisé pour enrichir les contrats avec les informations de distribution. |
+| `RPT_ADHERENTS_COURTIERS` | Table cible alimentée par la procédure. |
 
-## Tests et validation
+---
 
-| ID test | Scenario | Donnees entree | Resultat attendu | Resultat obtenu | Statut |
-|---|---|---|---|---|---|
-| T-001 | Lecture echantillon cible | Table cible alimentee | Requete `SELECT * LIMIT 100` sans erreur | A executer | A completer |
-| T-002 | Controle volumetrie globale | Procedure executee | `NB_LIGNES > 0` | A executer | A completer |
-| T-003 | Validation structure cible | Table cible creee | Colonnes attendues presentes | A executer | A completer |
-| T-004 | Controle partitions hors perimetre | Partitions sources/cible | 0 ligne retournee | A executer | A completer |
-| T-005 | Controle doublons complets | Cible alimentee | `NB_DOUBLONS_COMPLETS = 0` | A executer | A completer |
-| T-006 | Controle doublons cle metier | Cible alimentee | 0 ligne retournee | A executer | A completer |
-| T-007 | Completude incrementale | Partitions attendues vs cible | 0 partition manquante | A executer | A completer |
-| T-008 | Nullite sur champs cles | Cible alimentee | Compteurs a 0 ou justifies | A executer | A completer |
-| T-009 | Integrite du code perimetre | Cible alimentee | Une seule valeur `PERIM_COURTIER_ASTER` | A executer | A completer |
+## 📤 Données produites
 
-## Controle des versions
+La procédure produit une table de reporting consolidée au niveau adhérent / contrat / courtier, directement exploitable pour les analyses décisionnelles et les dashboards Power BI.
 
-| Version | Date | Developpeur | Modifications |
-|---|---|---|---|
-| v0.1 | 2026-06-10 | A completer | Remplissage initial a partir de `Report adherents.sql` |
-| v1.0 | YYYY-MM-DD |  | Validation initiale |
+| Champ | Description |
+|---|---|
+| `ID_ADHERENT` | Identifiant métier unique de l’adhérent. |
+| `LIB_CIVILITE` | Civilité normalisée issue du code source. |
+| `NOM_ADHERENT` | Nom de l’adhérent. |
+| `PRENOM_ADHERENT` | Prénom de l’adhérent. |
+| `ADRESSE_LIGNE_1` | Adresse principale de l’adhérent. |
+| `COMPLEMENT_ADRESSE` | Complément d’adresse. |
+| `VILLE` | Ville de l’adhérent. |
+| `CODE_POSTAL` | Code postal validé sur 5 chiffres. |
+| `CODE_DEPARTEMENT` | Code département dérivé du code postal. |
+| `COMMUNE` | Commune issue des données de convocation. |
+| `EMAIL_ADHERENT` | Adresse email de l’adhérent. |
+| `IND_EMAIL_PRESENT` | Indicateur Oui / Non de présence email. |
+| `TELEPHONE_ADHERENT` | Téléphone de l’adhérent. |
+| `NUMERO_CONTRAT` | Numéro du contrat. |
+| `TYPE_PRODUIT` | Type ou famille de produit. |
+| `LIB_PRODUIT_ASSURANCE` | Libellé du produit d’assurance. |
+| `DATE_EFFET_CONTRAT` | Date d’effet du contrat. |
+| `DATE_FIN_CONTRAT` | Date de fin du contrat. |
+| `STATUT_CONTRAT` | Statut du contrat. |
+| `ORIGINE_CONTRAT` | Origine ou canal du contrat. |
+| `NOM_COURTIER` | Nom du courtier associé. |
+| `EMAIL_COURTIER` | Email du courtier. |
+| `TELEPHONE_COURTIER` | Téléphone prioritaire du courtier. |
+| `INDICATEUR_NPAI` | Indicateur courrier non distribuable. |
+| `BUREAU_DISTRIBUTION` | Bureau ou agence de distribution. |
+| `CODE_PERIMETRE` | Code de périmètre anonymisé pour segmentation aval. |
+| `CLE_PARTITION` | Clé de partition au format `AAAAMM`. |
+| `DATE_DERNIER_RAFRAICHISSEMENT` | Date de chargement ou de rafraîchissement de la ligne. |
 
-## Checklist de validation
+---
 
-- [x] Type de script clairement identifie (Procedure/View/CTE).
-- [x] Entrees/sorties documentees.
-- [x] Sources et dependances completes.
-- [x] Logique d implementation detaillee.
-- [x] Regles de calcul explicites.
-- [x] Gestion des erreurs decrite.
-- [x] Exigences securite et confidentialite precisees.
-- [x] Criteres de performance renseignes.
-- [x] Cas de tests documentes.
-- [x] Versionning mis a jour.
+## ⚙️ Paramètres d’entrée
+
+La procédure ne prend aucun paramètre d’entrée explicite. Le périmètre temporel et les partitions à traiter sont calculés dynamiquement à l’exécution.
+
+| Élément | Description |
+|---|---|
+| **Paramètres utilisateur** | Aucun paramètre manuel requis. |
+| **Périmètre temporel** | Calculé dynamiquement à partir des partitions disponibles et de la fenêtre historique conservée. |
+| **Fenêtre historique** | Conservation des partitions utiles sur une fenêtre glissante de 5 ans. |
+| **Mode d’exécution** | Appel direct de la procédure stockée. |
+
+### Exemple d’appel
+
+```sql
+CALL BD_ASSURANCE_ANALYTICS.SC_PILOTAGE_COURTIERS.PS_RAFRAICHIR_ADHERENTS_COURTIERS();
