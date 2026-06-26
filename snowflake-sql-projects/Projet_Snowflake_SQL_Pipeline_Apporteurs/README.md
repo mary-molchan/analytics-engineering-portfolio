@@ -1,69 +1,98 @@
-# Pipeline SQL de préparation des données pour l’analyse de la performance financière des apporteurs *(version anonymisée pour portfolio public)*
+# Pipeline SQL de préparation des données pour l’analyse de la performance financière des apporteurs
 
-Ce projet presente une implementation SQL industrialisee pour le pilotage des indicateurs apporteurs dans Snowflake: calcul des collectes/decollectes, consolidation des encours et orchestration complete du traitement.
+## 🔒 Confidentialité et adaptation publique
 
-## Dimension metier (pourquoi et pour qui)
-Ce projet s'adresse aux equipes metier Assurance (distribution, pilotage commercial, finance/controle de gestion) ainsi qu'aux equipes data qui alimentent les reportings decisionnels.
+Ce projet est **entièrement anonymisé et adapté pour une démonstration publique**. Aucune dénomination réelle n'est exposée dans ce repository : **ni bases de données, ni schémas, ni tables, ni warehouses, ni identifiants métier internes**. Tous les noms techniques, référentiels et éléments sensibles ont été remplacés par des appellations génériques afin de préserver strictement la confidentialité des systèmes et des données internes.
 
-Il sert a repondre a des questions essentielles de pilotage:
-- Quels apporteurs contribuent le plus a la collecte nette?
-- Quelle est la dynamique collecte/decollecte par periode?
-- Comment evoluent les encours associes aux portefeuilles distribues?
+## 🗂️ Contexte du projet
 
-Concretement, il fournit une base fiable pour:
-- Suivre la performance commerciale des reseaux d'apporteurs.
-- Detecter les signaux de ralentissement ou de risque (hausse des decollectes).
-- Prioriser les actions de developpement, d'animation reseau et de retention client.
+> **Domaine** : assurance / finance  
+> **Taille de l'organisation** : grand groupe international  
+> **Mon rôle** : Data Analytics Engineer  
+> **Mon apport** : j'ai conçu, structuré et documenté un pipeline SQL Snowflake modulaire pour préparer les données de performance financière des apporteurs, automatiser les calculs de collecte / décollecte et fiabiliser l'alimentation des reportings décisionnels.
 
-Dans le secteur de l'assurance, ce type d'analyse est strategique car il relie directement la production commerciale, la stabilite des encours et la qualite du portefeuille dans le temps. Il contribue donc a une meilleure allocation des efforts commerciaux, a la maitrise des risques business et a la prise de decision fondee sur des indicateurs consolides.
+## 📌 Public cible
 
-## Objectif du projet
+Ce projet est destiné aux équipes métier en charge de la distribution, du pilotage commercial et du contrôle de gestion, ainsi qu’aux équipes data responsables de l’alimentation des reportings décisionnels. Il vise à fournir une base analytique fiable pour suivre la performance des réseaux d’apporteurs et soutenir la prise de décision métier.
+
+## 🎯 Objectifs métier du projet
+
+Ce projet répond à un besoin de pilotage commercial des réseaux d’apporteurs, en consolidant les indicateurs de collecte, décollecte et encours dans une base fiable pour l’analyse décisionnelle.
+
+- Identifier les apporteurs qui contribuent le plus à la collecte nette.
+- Suivre la dynamique de collecte et de décollecte par période.
+- Analyser l’évolution des encours associés aux portefeuilles distribués.
+- Détecter les signaux de ralentissement commercial ou de risque business.
+- Prioriser les actions d’animation réseau, de développement commercial et de rétention client.
+- Fournir aux équipes métier des indicateurs consolidés pour soutenir la prise de décision.
+
+## ⚙️ Objectifs techniques du projet
+
+Pour répondre au besoin de pilotage métier décrit ci-dessus, ce projet vise à industrialiser la préparation des données apporteurs dans Snowflake.
+
 - Structurer un pipeline analytique fiable, lisible et maintenable.
-- Centraliser l'initialisation technique (variables de session, chemins sources/cibles).
-- Supprimer la logique dupliquee entre procedures.
-- Standardiser l'execution via une procedure orchestratrice avec controle de statut.
+- Centraliser l'initialisation technique : variables de session, paramètres d'exécution, chemins sources et cibles.
+- Supprimer la logique dupliquée entre les procédures SQL.
+- Standardiser l'exécution via une procédure orchestratrice avec contrôle de statut.
+- Fiabiliser le calcul des indicateurs de collecte, décollecte et encours.
+- Produire une base de données consolidée, directement exploitable pour le reporting décisionnel.
 
-## Methodes et approche technique
-- Procedures stockees SQL modulaires (specialisation par responsabilite).
-- CTE pour clarifier les etapes de transformation.
-- MERGE/UPDATE pour charger et synchroniser les tables cibles.
-- Filtrage par partition (AAAAMM) pour un traitement incremental et coherent.
-- Verification prealable des donnees sources avant execution metier.
-- Journalisation de sortie (statut, duree, utilisateur, role, periode traitee).
+## 🧩 Méthodes et approche technique
 
-## Logique du code
-1. Initialiser le contexte d'execution et les variables partagees.
-2. Calculer la periode de traitement et valider la presence des donnees sources.
-3. Executer le calcul des flux collecte/decollecte par apporteur.
-4. Executer le calcul des statistiques apporteurs et des indicateurs d'encours.
-5. Retourner un resultat d'orchestration exploitable pour le suivi.
+L’approche technique repose sur une structuration modulaire du traitement SQL afin de rendre le pipeline plus lisible, maintenable et contrôlable.
 
-## Execution Order
+- Procédures stockées SQL modulaires, spécialisées par responsabilité.
+- CTE pour clarifier les étapes de transformation.
+- MERGE / UPDATE pour charger et synchroniser les tables cibles.
+- Filtrage par partition `AAAAMM` pour un traitement incrémental et cohérent.
+- Vérification préalable des données sources avant exécution métier.
+- Journalisation de sortie : statut, durée, utilisateur, rôle, période traitée.
 
-| Step | Script | Description |
+## 🔄 Logique du code
+
+Le code suit une séquence d’exécution standardisée, depuis l’initialisation du contexte jusqu’au retour d’un résultat d’orchestration exploitable pour le suivi.
+
+1. Initialiser le contexte d'exécution et les variables partagées.
+2. Calculer la période de traitement et valider la présence des données sources.
+3. Exécuter le calcul des flux de collecte / décollecte par apporteur.
+4. Exécuter le calcul des statistiques apporteurs et des indicateurs d'encours.
+5. Retourner un résultat d'orchestration exploitable pour le suivi.
+
+## 🔢 Ordre d'exécution
+
+| Étape | Script | Description |
 |---|---|---|
-| 1 | [`sql/01_initialization.sql`](sql/01_initialization.sql) | Initialisation les objets, tables ou paramètres de base de données requis. |
-| 2 | [`sql/02_sp_calc_app_stats.sql`](sql/02_sp_calc_app_stats.sql) | Une procédure stockée permettant de collecter une liste d'apporteurs. |
-| 3 | [`sql/03_sp_calc_collect_app.sql`](sql/03_sp_calc_collect_app.sql) | Une procédure stockée de calcul des indicateurs financiers des apporteurs. |
-| 4 | [`sql/04_sp_orchestrate_apporteurs.sql`](sql/04_sp_orchestrate_apporteurs.sql) | Une procédure stockée orchestrée permettant des mises à jour rapides des données. |
+| 1 | [`sql/01_initialization.sql`](sql/01_initialization.sql) | Initialise les objets, tables et paramètres techniques requis. |
+| 2 | [`sql/02_sp_calc_app_stats.sql`](sql/02_sp_calc_app_stats.sql) | Collecte et structure la liste des apporteurs nécessaires au traitement analytique. |
+| 3 | [`sql/03_sp_calc_collect_app.sql`](sql/03_sp_calc_collect_app.sql) | Calcule les indicateurs financiers des apporteurs : collecte, décollecte, encours et statistiques associées. |
+| 4 | [`sql/04_sp_orchestrate_apporteurs.sql`](sql/04_sp_orchestrate_apporteurs.sql) | Orchestre l'exécution du pipeline et standardise les mises à jour rapides des données. |
 
-## Documentation
+## 📚 Documentation
 
-| Document | Description |
-|---|---|
-| [`docs/specifications/02_sp_calc_app_stats_specification.md`](docs/specifications/02_sp_calc_app_stats_specification.md) | Spécifications techniques pour la création d'une procédure stockée permettant de collecter une liste d'apporteurs. |
-| [`docs/specifications/03_sp_calc_collect_app_specification.md`](docs/specifications/03_sp_calc_collect_app_specification.md) | Spécifications techniques pour la création d'une procédure stockée de calcul des indicateurs financiers des apporteurs. |
-| [`docs/specifications/04_sp_orchestrate_apporteurs_specification.md`](docs/specifications/04_sp_orchestrate_apporteurs_specification.md) | Spécifications techniques pour la création d'une procédure stockée orchestrée permettant des mises à jour rapides des données. |
+La documentation technique du projet est organisée autour des principales procédures stockées du pipeline.  
+Chaque document décrit le rôle de la procédure, sa logique de traitement, ses paramètres, ses contrôles et sa contribution au flux global.
 
-## Valeur apportee
-- Reduction de la complexite operationnelle grace a une architecture modulaire.
-- Meilleure maintenabilite du code (moins de duplication, plus de lisibilite).
-- Execution robuste avec controles explicites et sortie standardisee.
-- Documentation technique alignee avec le code pour faciliter la reprise.
+#### 1. Collecte des apporteurs
 
-## Confidentialite et adaptation publique
-> Ce projet est **entierement deanonimise et adapte pour une demonstration publique**.
->
-> Aucune denomination reelle n'est exposee dans ce repository: **ni bases de donnees, ni schemas, ni tables, ni warehouses, ni identifiants metier internes**.
->
-> Tous les noms techniques et codes ont ete remplaces par des appellations generiques afin de preserver strictement la confidentialite des systemes et des donnees internes.
+[`02_sp_calc_app_stats_specification.md`](docs/specifications/02_sp_calc_app_stats_specification.md)  
+Spécifications techniques pour la création d'une procédure stockée permettant de collecter et structurer la liste des apporteurs nécessaires au traitement analytique.
+
+#### 2. Calcul des indicateurs financiers
+
+[`03_sp_calc_collect_app_specification.md`](docs/specifications/03_sp_calc_collect_app_specification.md)  
+Spécifications techniques pour la création d'une procédure stockée dédiée au calcul des indicateurs financiers des apporteurs : collecte, décollecte, encours et statistiques associées.
+
+#### 3. Orchestration du pipeline
+
+[`04_sp_orchestrate_apporteurs_specification.md`](docs/specifications/04_sp_orchestrate_apporteurs_specification.md)  
+Spécifications techniques pour la création d'une procédure stockée orchestrée, permettant de standardiser l'exécution du pipeline, contrôler les statuts et accélérer les mises à jour des données.
+
+## 💡Valeur apportée
+
+Ce projet apporte de la valeur à la fois sur le plan technique, opérationnel et décisionnel, en rendant le pipeline plus fiable, plus lisible et plus facilement réutilisable.
+
+- **Complexité opérationnelle réduite** : architecture modulaire séparant l’initialisation, les calculs métier et l’orchestration.
+- **Maintenabilité renforcée** : logique SQL factorisée, moins de duplication et meilleure lisibilité du code.
+- **Exécution fiabilisée** : contrôles explicites, validation des données sources et sortie d’exécution standardisée.
+- **Reporting plus stable** : préparation cohérente des indicateurs de collecte, décollecte et encours pour les reportings décisionnels.
+- **Reprise facilitée** : documentation technique alignée avec le code afin de simplifier la maintenance, l’évolution et le transfert de connaissance.
