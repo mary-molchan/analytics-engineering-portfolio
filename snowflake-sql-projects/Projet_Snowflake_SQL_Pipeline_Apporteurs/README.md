@@ -1,4 +1,4 @@
-# Pipeline SQL DataPrep sur les apporteurs (version anonymisée pour portfolio public)
+# Pipeline SQL de préparation des données pour l’analyse de la performance financière des apporteurs *(version anonymisée pour portfolio public)*
 
 Ce projet presente une implementation SQL industrialisee pour le pilotage des indicateurs apporteurs dans Snowflake: calcul des collectes/decollectes, consolidation des encours et orchestration complete du traitement.
 
