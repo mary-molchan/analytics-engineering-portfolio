@@ -6,7 +6,7 @@ Ce projet est **entièrement anonymisé et adapté pour une démonstration publi
 
 ## 🗂️ Contexte du projet
 
-> **Domaine** : assurance / finance / risk management  
+> **Domaine** : assurance / finance
 > **Taille de l'organisation** : grand groupe international  
 > **Mon rôle** : Data Analytics Engineer  
 > **Mon apport** : j'ai conçu, structuré et documenté un pipeline SQL Snowflake end-to-end permettant d’ingérer 9 sources financières, de construire une couche MART analytique, de calculer des KPIs de performance et de risque, puis d’exposer une vue BI consolidée pour le reporting décisionnel.
