@@ -1,101 +1,94 @@
-# Projet Snowflake SQL - Audit Flux & Analytics Financière Courtiers. Version anonymisée pour portfolio public.
+# Pipeline SQL d’audit des flux et d’analytics financière courtiers
 
-## Vue d'ensemble
+## 🔒 Confidentialité et adaptation publique
 
-Ce projet présente une implémentation SQL industrialisée pour alimenter un pipeline analytique complet dans Snowflake.
+Ce projet est **entièrement anonymisé et adapté pour une démonstration publique**. Aucune dénomination réelle n'est exposée dans ce repository : **ni bases de données, ni schémas, ni tables, ni warehouses, ni référentiels internes, ni labels métier sensibles**. Tous les noms techniques, fichiers, structures et éléments sensibles ont été remplacés par des appellations génériques afin de préserver strictement la confidentialité des systèmes et des données internes.
 
-Il repose sur une architecture end-to-end ingérant **9 sources de données financières** dans une couche RAW, puis synthétisant une couche MART avec des calculs métier complexes : efficacité de commission, vieillissement des règlements, flux de transactions, scoring de risque et suivi des exceptions d’audit.
+## 🗂️ Contexte du projet
 
-Le pipeline expose une vue BI consolidée destinée à l’analytics et au reporting.
+> **Domaine** : assurance / finance / risk management  
+> **Taille de l'organisation** : grand groupe international  
+> **Mon rôle** : Data Analytics Engineer  
+> **Mon apport** : j'ai conçu, structuré et documenté un pipeline SQL Snowflake end-to-end permettant d’ingérer 9 sources financières, de construire une couche MART analytique, de calculer des KPIs de performance et de risque, puis d’exposer une vue BI consolidée pour le reporting décisionnel.
 
----
+## 📌 Public cible
 
-## Dimension métier
+Ce projet est destiné aux équipes métier Finance, Risk Management, pilotage commercial et contrôle de gestion, ainsi qu’aux équipes data responsables de la préparation des datasets de reporting et d’analytics. Il vise à fournir une base analytique fiable pour suivre la performance financière des partenaires, analyser les flux, détecter les anomalies et soutenir la prise de décision.
 
-Ce projet s'adresse aux équipes métier **Finance** et **Risk Management** : pilotage commercial, analyse des portefeuilles, contrôle de gestion, ainsi qu'aux équipes data en charge de la préparation des datasets de reporting et analytics.
+## 🎯 Objectifs métier du projet
 
-Il sert à répondre à des questions de pilotage essentielles :
+Ce projet répond à un besoin de pilotage financier des courtiers et partenaires, en consolidant les transactions, commissions, règlements, exceptions d’audit et indicateurs de risque dans une base fiable pour l’analyse décisionnelle.
 
-- Quelle est la performance de commission par partenaire, agence ou courtier ?
-- Comment évolue le vieillissement des règlements et quels risques de liquidité existent ?
-- Quel est le score de risque global par contrat et partenaire ?
-- Quelles anomalies et exceptions nécessitent un audit ?
+- Mesurer la performance de commission par partenaire, agence ou courtier.
+- Suivre l’évolution des règlements, des retards et des risques de liquidité.
+- Consolider les transactions, commissions et règlements dans une vision analytique unique.
+- Calculer un score de risque global par contrat et partenaire.
+- Identifier les anomalies, exceptions et situations nécessitant un audit.
+- Alimenter des dashboards BI avec des indicateurs fiables, traçables et pré-calculés.
 
-Concrètement, il fournit une base fiable pour :
+## ⚙️ Objectifs techniques du projet
 
-- suivre les KPIs opérationnels mensuels : taux d'efficacité, taux de recouvrement, taux de reversal ;
-- disposer d'une vision consolidée des transactions, commissions et règlements par partenaire ;
-- scorer automatiquement le risque à partir de 4 critères : commission, résidus, retards de paiement, reversals ;
-- alimenter des dashboards Power BI avec un chargement fiable, structuré et traçable.
-
-Dans le secteur financier, ce type de dispositif est important car il permet de relier la qualité des données transactionnelles, la performance commerciale et le profil de risque des partenaires. Il soutient ainsi le pilotage des réseaux de distribution, l'analyse des performances et la prise de décision à partir d'un socle de données stabilisé.
-
----
-
-## Objectifs du projet
+Pour répondre au besoin de pilotage métier décrit ci-dessus, ce projet vise à industrialiser la préparation des données financières dans Snowflake, depuis l’ingestion des sources jusqu’à la création d’une vue BI consolidée.
 
 - Structurer une alimentation SQL fiable, lisible et maintenable pour le reporting financier end-to-end.
-- Ingérer 9 sources de données depuis des fichiers Excel dans une couche RAW standardisée.
+- Ingérer 9 sources de données financières dans une couche RAW standardisée.
 - Synthétiser une couche MART avec des calculs KPI complexes et des flags de risque.
-- Implémenter un système de scoring de risque composite.
-- Exposer une vue BI consolidée pour l'analytics sans logique de calcul côté client.
+- Implémenter un système de scoring de risque composite fondé sur plusieurs critères métier.
+- Exposer une vue BI consolidée pour l’analytics sans logique de calcul côté client.
 - Garantir la traçabilité et la qualité des données avec des validations et contrôles.
 - Documenter la logique technique et métier du pipeline.
 
----
+## 🧩 Méthodes et approche technique
 
-## Méthodes et approche technique
+L’approche technique repose sur une architecture analytique en plusieurs couches, afin de séparer l’ingestion brute, les transformations métier, les agrégations et l’exposition BI.
 
-- **Architecture 3 couches** : Staging → RAW → MART.
-- **Tables de dimensions et de faits** avec logique historisée.
-- **SCD Type 2** : `valid_from`, `valid_to`, `is_current`.
-- **Agrégation mensuelle** sur partitions `dt_partition_yyyymm`.
-- **Scoring composite** : 4 flags binaires → `total_risk_flags`, sur une échelle de 0 à 4.
-- **Joins complets via keyset** pour garantir la complétude des données.
-- **Calculs de KPI** avec normalisations, gestion des divisions par zéro et traitement des valeurs nulles.
-- **Contrôles qualité** sur les volumes, distributions de KPI et anomalies détectées.
+- Architecture 3 couches : Staging → RAW → MART.
+- Tables de dimensions et de faits avec logique historisée.
+- Gestion de l’historique avec SCD Type 2 : `valid_from`, `valid_to`, `is_current`.
+- Agrégation mensuelle sur partitions `dt_partition_yyyymm`.
+- Scoring composite : 4 flags binaires consolidés dans `total_risk_flags`, sur une échelle de 0 à 4.
+- Joins complets via keyset pour garantir la complétude des données.
+- Calculs de KPI avec normalisations, gestion des divisions par zéro et traitement des valeurs nulles.
+- Contrôles qualité sur les volumes, distributions de KPI et anomalies détectées.
 
----
+## 🔄 Logique du code
 
-## Logique du pipeline
+Le code suit une séquence d’exécution end-to-end, depuis l’initialisation du contexte Snowflake jusqu’à l’exposition d’une vue BI consolidée et exploitable pour le reporting.
 
 1. Initialiser le contexte Snowflake : warehouse, database, schemas RAW et MART, file format.
-2. Créer l'infrastructure : stage interne, tables RAW et structures de chargement.
+2. Créer l’infrastructure technique : stage interne, tables RAW et structures de chargement.
 3. Charger les données depuis les fichiers sources.
 4. Synthétiser les intermédiaires MART :
-   - `DM_PARTNER` : enrichissement broker / agency avec flags d'éligibilité et de risque ;
+   - `DM_PARTNER` : enrichissement broker / agency avec flags d’éligibilité et de risque ;
    - `DM_CONTRACT_CORE` : dimension contrat avec flags et catégorisation premium ;
    - `FM_COMMISSION_EFFICIENCY` : métriques mensuelles de commission ;
    - `FM_SETTLEMENT_AGING` : métriques mensuelles de règlement ;
    - `FM_TRANSACTION_FLOW` : métriques mensuelles de flux ;
    - `FM_AUDIT_MONTHLY` : agrégation des exceptions par contrat.
 5. Créer la table de faits principale `FM_FINANCE_MONTHLY`.
-6. Calculer les flags et le score de risque.
-7. Agréger au niveau partenaire avec `FM_PARTNER_PERFORMANCE`.
+6. Calculer les flags métier et le score de risque.
+7. Agréger les indicateurs au niveau partenaire avec `FM_PARTNER_PERFORMANCE`.
 8. Exposer la vue BI `VW_BI_FINANCE_COCKPIT`.
 9. Valider la qualité des données et la cohérence des indicateurs.
 
----
+## 🔢 Ordre d'exécution
 
-## Script d'exécution
+| Étape | Script | Description |
+|---|---|---|
+| 1 | [`sql/01_SNOWFLAKE_LOAD_AND_MART.sql`](sql/01_SNOWFLAKE_LOAD_AND_MART.sql) | Pipeline SQL end-to-end chargeant les 9 sources, créant les couches RAW et MART, calculant les KPIs métier et exposant une vue BI consolidée. |
 
-| Script | Description |
-|---|---|
-| [`01_SNOWFLAKE_LOAD_AND_MART.sql`](sql/01_SNOWFLAKE_LOAD_AND_MART.sql) | Pipeline SQL end-to-end chargeant les 9 sources, créant les couches RAW et MART, calculant les KPIs métier et exposant une vue BI consolidée. |
+## 📚 Documentation
 
----
+La documentation technique du projet décrit l’architecture du pipeline, les étapes de traitement, les tables créées, la logique de calcul, les contrôles qualité et les hypothèses métier.
 
-## Documentation technique
+#### 1. Spécification technique du pipeline SQL
 
-| Document | Description |
-|---|---|
-| [`Specification_SQL_Script_Pipeline.md`](docs/Specification_SQL_Script_Pipeline.md) | Spécification technique détaillée du pipeline SQL : architecture, étapes de traitement, tables créées, logique de calcul, contrôles qualité et hypothèses métier. |
+[`Specification_SQL_Script_Pipeline.md`](docs/Specification_SQL_Script_Pipeline.md)  
+Spécification technique détaillée du pipeline SQL : architecture, étapes de traitement, tables créées, logique de calcul, contrôles qualité, scoring de risque et hypothèses métier.
 
----
+## 📂 Fichiers de données sources
 
-## Fichiers de données sources
-
-Les fichiers sources sont stockés dans le dossier [`sources/`](sources/).
+Les fichiers sources sont stockés dans le dossier [`sources/`](sources/). Ils représentent des données financières synthétiques, anonymisées et adaptées pour une démonstration publique.
 
 | Fichier | Description |
 |---|---|
@@ -109,47 +102,14 @@ Les fichiers sources sont stockés dans le dossier [`sources/`](sources/).
 | [`R_COMMISSION_RULES.xlsx`](sources/R_COMMISSION_RULES.xlsx) | Référentiel des règles de commission avec conditions et efficacité. |
 | [`AUDIT_EXCEPTIONS.xlsx`](sources/AUDIT_EXCEPTIONS.xlsx) | Exceptions et écarts détectés nécessitant analyse ou audit. |
 
----
+## 💡 Valeur apportée
 
-## Valeur apportée
+Ce projet apporte de la valeur à la fois sur le plan technique, opérationnel et décisionnel, en rendant le pipeline financier plus performant, plus transparent et plus facilement exploitable pour le reporting.
 
-- **Performance** : tables synthétisées pré-calculées, plus rapides qu'une vue recalculée à chaque requête.
+- **Performance renforcée** : tables synthétisées pré-calculées, plus rapides qu’une vue recalculée à chaque requête.
 - **Transparence métier** : logique de calcul explicite, documentée et auditable.
-- **Complétude des données** : joins complets limitant les pertes d'information.
-- **Scoring de risque robuste** : système composite fondé sur 4 dimensions de risque.
+- **Complétude des données** : joins complets limitant les pertes d’information entre les différents flux.
+- **Scoring de risque robuste** : système composite fondé sur plusieurs dimensions de risque.
 - **Readiness BI** : vue consolidée prête pour Power BI sans transformation côté client.
 - **Validation continue** : contrôles qualité intégrés pour détecter les anomalies à chaque chargement.
-- **Maintenabilité** : séparation claire entre sources, logique SQL, documentation et couche analytique.
-
----
-
-## Compétences démontrées
-
-- Snowflake SQL
-- Data warehousing
-- Architecture RAW / MART
-- Modélisation dimensionnelle
-- Tables de faits et dimensions
-- SCD Type 2
-- Data quality checks
-- KPI engineering
-- Risk scoring
-- Pipeline SQL end-to-end
-- Documentation technique
-- Préparation de données pour BI
-- Structuration de projet analytics engineering
-
----
-
-## Confidentialité et adaptation publique
-
-> Ce projet est **entièrement dénominalisé et adapté pour une démonstration publique**.
->
-> Aucune dénomination réelle n'est exposée dans ce repository : ni bases de données, ni schémas, ni tables, ni warehouses, ni référentiels internes, ni labels métier sensibles.
->
-> Tous les noms techniques utilisés dans ce projet sont génériques et représentatifs d'une architecture standard.
->
-> Toutes les données dans les fichiers Excel sont synthétiques et anonymisées : identifiants masqués, montants et dates randomisés, absence de correspondance avec des entités réelles.
->
-> Le code SQL et la documentation reflètent une approche de production complète : architecture, patterns, calculs métier, gouvernance et contrôles qualité, sans exposition de système interne.
-
+- **Maintenabilité renforcée** : séparation claire entre sources, logique SQL, documentation et couche analytique.
