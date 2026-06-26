@@ -1,3 +1,7 @@
+<img width="2560" height="1269" alt="image" src="https://github.com/user-attachments/assets/5cb7a2b6-6502-4d62-8b81-7bc3fa02a580" />
+
+
+
 # ❄️ Projets Snowflake SQL
 
 Ce dossier regroupe plusieurs projets Snowflake SQL réalisés dans une logique d’analytics engineering, avec un focus sur la préparation des données, l’industrialisation des traitements, la création de couches de reporting, la qualité des données et la documentation technique.  Ces projets montrent comment SQL peut être utilisé non seulement pour interroger des données, mais aussi pour construire des pipelines analytiques structurés, alimenter des tables de synthèse, préparer des vues BI consolidées et rendre les traitements plus fiables, maintenables et réutilisables.
