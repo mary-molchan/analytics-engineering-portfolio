@@ -83,7 +83,7 @@ La documentation technique du projet décrit l’architecture du pipeline, les �
 
 #### 1. Spécification technique du pipeline SQL
 
-[`Specification_SQL_Script_Pipeline.md`](docs/README.md)  
+[`Specification_SQL_Script_Pipeline.md`](docs)  
 Spécification technique détaillée du pipeline SQL : architecture, étapes de traitement, tables créées, logique de calcul, contrôles qualité, scoring de risque et hypothèses métier.
 
 ## 📂 Fichiers de données sources
