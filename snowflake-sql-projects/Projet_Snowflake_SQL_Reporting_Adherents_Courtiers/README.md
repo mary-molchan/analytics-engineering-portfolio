@@ -72,8 +72,7 @@ La documentation technique du projet décrit la logique de la procédure stocké
 
 #### 1. Spécification technique du reporting adhérents courtiers
 
-[`Spécification technique : Pipeline SQL de reporting adhérents courtiers`](docs)  
-Spécification technique détaillée du script SQL : objectif du traitement, structure de la table cible, logique de normalisation, règles de chargement incrémental, gestion de l’historique et contrôles qualité.
+[`Spécification technique`](docs) - spécification technique détaillée du script SQL : objectif du traitement, structure de la table cible, logique de normalisation, règles de chargement incrémental, gestion de l’historique et contrôles qualité.
 
 ## 💡 Valeur apportée
 
