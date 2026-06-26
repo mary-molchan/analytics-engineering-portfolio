@@ -87,7 +87,7 @@ Spécifications techniques pour la création d'une procédure stockée dédiée 
 [`04_sp_orchestrate_apporteurs_specification.md`](docs/specifications/04_sp_orchestrate_apporteurs_specification.md)  
 Spécifications techniques pour la création d'une procédure stockée orchestrée, permettant de standardiser l'exécution du pipeline, contrôler les statuts et accélérer les mises à jour des données.
 
-## 💡Valeur apportée
+## 💡 Valeur apportée
 
 Ce projet apporte de la valeur à la fois sur le plan technique, opérationnel et décisionnel, en rendant le pipeline plus fiable, plus lisible et plus facilement réutilisable.
 
