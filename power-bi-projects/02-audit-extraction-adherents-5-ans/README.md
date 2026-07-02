@@ -134,8 +134,8 @@ La documentation du projet est organisée autour des spécifications fonctionnel
 
 | Document | Description | Lien |
 |---|---|---|
-| Spécification fonctionnelle Power BI | Description du besoin métier, des utilisateurs, des pages, des filtres, des visualisations, des règles de gestion et des critères d’acceptation. | [Voir le document](Spécification_fonctionnelle_dashboard_Power_BI.md) |
-| Spécification technique Power BI | Description des sources, du modèle sémantique, des transformations, des mesures DAX, du refresh, de la sécurité et des contrôles techniques. | [Voir le document](Spécification_technique_dashboard_Power_BI.md) |
+| Spécification fonctionnelle Power BI | Description du besoin métier, des utilisateurs, des pages, des filtres, des visualisations, des règles de gestion et des critères d’acceptation. | [Voir le document](docs/Spécification_fonctionnelle_dashboard_Power_BI.md) |
+| Spécification technique Power BI | Description des sources, du modèle sémantique, des transformations, des mesures DAX, du refresh, de la sécurité et des contrôles techniques. | [Voir le document](docs/Spécification_technique_dashboard_Power_BI.md) |
 
 
 ## 💡 Valeur apportée
