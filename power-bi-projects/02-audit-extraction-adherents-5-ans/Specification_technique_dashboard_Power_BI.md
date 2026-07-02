@@ -12,15 +12,14 @@ Ce document décrit une **version anonymisée et adaptée pour démonstration pu
 |---|---|
 | **Nom du rapport** | Audit et extraction des adhérents sur 5 ans |
 | **Code projet** | `Audit_extraction_adherents_5_ans` |
-| **Domaine métier** | Assurance / Adhérents / Distribution courtiers / Audit opérationnel |
+| **Domaine métier** | Assurance |
 | **Objectif du rapport** | Permettre la recherche, le contrôle, la consultation détaillée et l’extraction maîtrisée des données adhérents sur une fenêtre historique de 5 ans. |
 | **Auteur** | Maryna MOLCHAN |
-| **Date de création** | 2026-06-10 |
-| **Dernière mise à jour** | 2026-06-25 |
-| **Statut** | En revue |
+| **Date de création** | N / A |
+| **Dernière mise à jour** | N / A |
+| **Statut** | N / A |
 | **Confidentialité** | Portfolio public anonymisé |
-| **Fichier Power BI** | [Lien vers `.pbix`] |
-| **Repository** | [Lien GitHub / SharePoint / OneDrive] |
+| **Fichier Power BI** | N / A |
 
 ---
 
