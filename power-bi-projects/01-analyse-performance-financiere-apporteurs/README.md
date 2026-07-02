@@ -145,7 +145,7 @@ La page **Actualisation du rapport** permet aux utilisateurs de vérifier rapide
 
 ## 📚 Documentation
 
-[`Spécification fonctionnelle Power BI`](docs/specification_fonctionnelle_powerbi_analyse_performance_apporteurs.md) - description du besoin métier, des utilisateurs, des KPIs, des pages, des filtres, des visualisations et des critères d’acceptation
+[`Spécification fonctionnelle Power BI`](specification_fonctionnelle_powerbi_analyse_performance_apporteurs.md) - description du besoin métier, des utilisateurs, des KPIs, des pages, des filtres, des visualisations et des critères d’acceptation
 
 
 ## 💡 Valeur apportée
