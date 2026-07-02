@@ -16,12 +16,11 @@ Ce document décrit une **version anonymisée et adaptée pour démonstration pu
 | **Objectif métier principal** | Rechercher, contrôler, consulter en détail et extraire des données adhérents sur une fenêtre historique de 5 ans. |
 | **Public cible** | Gestionnaires adhérents, responsables réseau, analystes reporting, équipe BI / Data |
 | **Auteur** | Maryna MOLCHAN |
-| **Date de création** | 2026-06-10 |
-| **Dernière mise à jour** | 2026-06-25 |
-| **Statut** | En revue |
+| **Date de création** | N / A |
+| **Dernière mise à jour** | N / A |
+| **Statut** | N / A |
 | **Confidentialité** | Portfolio public anonymisé |
-| **Lien rapport Power BI** | [À compléter] |
-| **Lien repository / documentation** | [À compléter] |
+| **Lien rapport Power BI** | N / A |
 
 ---
 
@@ -156,6 +155,8 @@ Le rapport est conçu pour répondre à des questions opérationnelles concrète
 
 ## 📄 Page 1 — Recherche des adhérents
 
+<img width="1306" height="735" alt="1к" src="https://github.com/user-attachments/assets/5df28723-f597-4325-8227-5355a7ce3cd2" />
+
 ### Objectif de la page
 
 Offrir une vue de recherche rapide permettant de retrouver un adhérent, consulter ses informations principales et préparer le passage vers la page de détail.
@@ -218,6 +219,8 @@ Offrir une vue de recherche rapide permettant de retrouver un adhérent, consult
 
 ## 📄 Page 2 — Informations détaillées sur l’adhérent
 
+<img width="1253" height="706" alt="2к" src="https://github.com/user-attachments/assets/4a1494ba-81ea-4c4d-ae5c-34feeb2b2c93" />
+
 ### Objectif de la page
 
 Afficher une fiche complète d’un adhérent sélectionné, incluant ses informations personnelles, son adresse, ses contrats et les informations liées à l’intermédiaire.
@@ -275,6 +278,8 @@ Afficher une fiche complète d’un adhérent sélectionné, incluant ses inform
 ---
 
 ## 📄 Page 3 — Extraction des adhérents dans un fichier Excel
+
+<img width="1253" height="702" alt="3к" src="https://github.com/user-attachments/assets/5d4b5456-80da-4974-93ce-17a8bcc4c7c5" />
 
 ### Objectif de la page
 
@@ -437,9 +442,9 @@ Permettre à l’utilisateur de préparer une extraction Excel fiable, filtrée 
 
 | Version | Date | Auteur | Modifications | Statut |
 |---|---|---|---|---|
-| `v0.1` | 2026-06-10 | Maryna MOLCHAN | Création initiale de la spécification fonctionnelle. | Brouillon |
-| `v0.9` | 2026-06-25 | Maryna MOLCHAN | Adaptation complète sur la base du rapport 3 pages. | En revue |
-| `v1.0` | À compléter | Maryna MOLCHAN | Validation fonctionnelle finale. | Validé |
+| `v0.1` | N / A | Maryna MOLCHAN | Création initiale de la spécification fonctionnelle. | Brouillon |
+| `v0.9` | N / A | Maryna MOLCHAN | Adaptation complète sur la base du rapport 3 pages. | En revue |
+| `v1.0` | N / A | Maryna MOLCHAN | Validation fonctionnelle finale. | Validé |
 
 ---
 
@@ -454,15 +459,6 @@ Permettre à l’utilisateur de préparer une extraction Excel fiable, filtrée 
 | **Existence email** | Indicateur Oui / Non indiquant si un email adhérent est renseigné. |
 | **Export Excel** | Extraction manuelle des lignes filtrées depuis un visuel Power BI. |
 | **Data with current layout** | Option Power BI permettant d’exporter les données selon la mise en page actuelle du visuel. |
-
-### Annexes
-
-- Lien vers le rapport Power BI : [À compléter]
-- Lien vers l’app Power BI : [À compléter]
-- Lien vers les screenshots : [À compléter]
-- Lien vers la documentation technique : [À compléter]
-- Lien vers la source portfolio : `AUDIT_ADHERENTS_DATA.xlsx`
-- Note de confidentialité : version portfolio entièrement anonymisée.
 
 ---
 
