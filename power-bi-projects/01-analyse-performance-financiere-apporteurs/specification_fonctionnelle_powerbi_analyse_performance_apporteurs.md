@@ -12,16 +12,15 @@ Ce document décrit une **version anonymisée et adaptée pour démonstration pu
 |---|---|
 | **Nom du rapport** | Analyse de la performance financière des apporteurs |
 | **Code projet** | FPA-DASHBOARD-2025 |
-| **Domaine métier** | Assurance / Finance / Performance commerciale des apporteurs |
+| **Domaine métier** | Assurance / Finance |
 | **Objectif métier principal** | Piloter la performance des apporteurs, suivre les volumes de contrats, les montants, la part UC, la collecte, la décollecte et les évolutions annuelles. |
 | **Public cible** | Direction commerciale, managers réseau, analystes métier, équipes data / BI |
 | **Auteur** | Maryna MOLCHAN |
-| **Date de création** | 2025-01-01 |
-| **Dernière mise à jour** | 2025-11-01 |
-| **Statut** | En revue |
+| **Date de création** | N / A |
+| **Dernière mise à jour** | N / A  |
+| **Statut** | N / A  |
 | **Confidentialité** | Portfolio public anonymisé |
-| **Lien rapport Power BI** | [À compléter] |
-| **Lien repository / documentation** | [À compléter] |
+| **Lien rapport Power BI** | N / A  |
 
 ---
 
@@ -39,11 +38,11 @@ Le rapport permet aux utilisateurs de suivre les indicateurs clés des apporteur
 
 ### Décisions supportées
 
-- Identifier les apporteurs les plus contributeurs.
-- Repérer les apporteurs en baisse de performance ou présentant un risque de décollecte.
-- Analyser les évolutions annuelles de collecte, décollecte, encours et souscriptions.
-- Prioriser les actions de suivi commercial par réseau, segment ou portefeuille.
-- Vérifier la fraîcheur des données avant analyse ou partage de résultats.
+- Identifier les apporteurs les plus contributeurs
+- Repérer les apporteurs en baisse de performance ou présentant un risque de décollecte
+- Analyser les évolutions annuelles de collecte, décollecte, encours et souscriptions
+- Prioriser les actions de suivi commercial par réseau, segment ou portefeuille
+- Vérifier la fraîcheur des données avant analyse ou partage de résultats
 
 ### Valeur attendue
 
@@ -135,12 +134,12 @@ Le rapport répond aux questions suivantes :
 
 ### Règles métier transverses
 
-- Les indicateurs sont calculés sur le périmètre filtré par l’utilisateur.
-- Les années disponibles dans le rapport servent de base aux comparaisons annuelles.
-- Les montants sont affichés en euros.
-- Les valeurs nulles ou manquantes sont conservées uniquement si elles restent interprétables.
-- En cas d’absence de données sur la partition courante, la dernière partition valide reste visible.
-- Les filtres doivent permettre une lecture globale par défaut, puis une analyse ciblée par apporteur, réseau, segment ou portefeuille.
+- Les indicateurs sont calculés sur le périmètre filtré par l’utilisateur
+- Les années disponibles dans le rapport servent de base aux comparaisons annuelles
+- Les montants sont affichés en euros
+- Les valeurs nulles ou manquantes sont conservées uniquement si elles restent interprétables
+- En cas d’absence de données sur la partition courante, la dernière partition valide reste visible
+- Les filtres doivent permettre une lecture globale par défaut, puis une analyse ciblée par apporteur, réseau, segment ou portefeuille
 
 ---
 
@@ -157,6 +156,8 @@ Le rapport répond aux questions suivantes :
 
 ## 📄 Page 1 — Liste des apporteurs
 
+<img width="1263" height="800" alt="1 - Copy" src="https://github.com/user-attachments/assets/156f904f-ae4a-4646-bcb3-131d9d0be90a" />
+
 ### Objectif de la page
 
 Fournir une vue centralisée et filtrable de la base des apporteurs, avec les indicateurs clés de volume, de réseau, de contrats, de montants et de part UC.
@@ -170,11 +171,11 @@ Fournir une vue centralisée et filtrable de la base des apporteurs, avec les in
 
 ### Décisions supportées
 
-- Identifier les apporteurs les plus importants.
-- Cibler un apporteur ou un segment pour analyse.
-- Préparer une analyse de performance plus détaillée.
-- Prioriser les réseaux ou portefeuilles à suivre.
-
+- Identifier les apporteurs les plus importants
+- Cibler un apporteur ou un segment pour analyse
+- Préparer une analyse de performance plus détaillée
+- Prioriser les réseaux ou portefeuilles à suivre
+- 
 ### Filtres et interactions
 
 | Filtre / slicer | Portée | Valeur par défaut | Commentaire |
@@ -196,11 +197,11 @@ Fournir une vue centralisée et filtrable de la base des apporteurs, avec les in
 
 ### Règles de gestion de la page
 
-- Les KPIs du haut donnent une vision globale de l’année.
-- Les KPIs du bas se recalculent selon les filtres appliqués.
-- La table est triable par les colonnes principales.
-- Les filtres peuvent être combinés pour isoler un apporteur, un réseau, un segment ou un portefeuille.
-- Si aucun filtre n’est appliqué, le rapport affiche l’ensemble du périmètre.
+- Les KPIs du haut donnent une vision globale de l’année
+- Les KPIs du bas se recalculent selon les filtres appliqués
+- La table est triable par les colonnes principales
+- Les filtres peuvent être combinés pour isoler un apporteur, un réseau, un segment ou un portefeuille
+- Si aucun filtre n’est appliqué, le rapport affiche l’ensemble du périmètre
 
 ### Améliorations envisagées
 
@@ -213,6 +214,8 @@ Fournir une vue centralisée et filtrable de la base des apporteurs, avec les in
 ---
 
 ## 📄 Page 2 — Performance des apporteurs
+
+<img width="1262" height="793" alt="2 - Copy" src="https://github.com/user-attachments/assets/ce5ab739-d747-49c3-abb3-eeefd7f5e209" />
 
 ### Objectif de la page
 
@@ -228,10 +231,10 @@ Analyser la performance financière des apporteurs par année, avec une lecture 
 
 ### Décisions supportées
 
-- Identifier les apporteurs en croissance ou en recul.
-- Prioriser les analyses sur les variations les plus significatives.
-- Suivre l’équilibre entre collecte, décollecte et encours.
-- Préparer des synthèses pour la direction ou les managers réseau.
+- Identifier les apporteurs en croissance ou en recul
+- Prioriser les analyses sur les variations les plus significatives
+- Suivre l’équilibre entre collecte, décollecte et encours
+- Préparer des synthèses pour la direction ou les managers réseau
 
 ### Filtres et interactions
 
@@ -256,11 +259,11 @@ Analyser la performance financière des apporteurs par année, avec une lecture 
 
 ### Règles de gestion de la page
 
-- Les comparaisons annuelles sont calculées uniquement lorsque les deux périodes sont disponibles.
-- Les variations positives et négatives sont différenciées visuellement.
-- Les montants sont affichés en euros, avec une granularité adaptée aux volumes.
-- Les graphiques combinent montants et volumes pour permettre une lecture croisée.
-- Les filtres de table permettent d’isoler rapidement un apporteur, un segment ou une année.
+- Les comparaisons annuelles sont calculées uniquement lorsque les deux périodes sont disponibles
+- Les variations positives et négatives sont différenciées visuellement
+- Les montants sont affichés en euros, avec une granularité adaptée aux volumes
+- Les graphiques combinent montants et volumes pour permettre une lecture croisée
+- Les filtres de table permettent d’isoler rapidement un apporteur, un segment ou une année
 
 ### Améliorations envisagées
 
@@ -273,6 +276,8 @@ Analyser la performance financière des apporteurs par année, avec une lecture 
 ---
 
 ## 📄 Page 3 — Écart collecte / décollecte
+
+<img width="1257" height="795" alt="3 - Copy" src="https://github.com/user-attachments/assets/9390cff3-d28a-43d5-b945-22d2ead2dd5a" />
 
 ### Objectif de la page
 
@@ -287,10 +292,10 @@ Identifier les apporteurs présentant les écarts les plus significatifs entre c
 
 ### Décisions supportées
 
-- Prioriser les actions commerciales sur les zones à risque.
-- Identifier les apporteurs leaders ou à fort potentiel.
-- Détecter les situations de décollecte importante.
-- Orienter les investigations métier vers les cas extrêmes.
+- Prioriser les actions commerciales sur les zones à risque
+- Identifier les apporteurs leaders ou à fort potentiel
+- Détecter les situations de décollecte importante
+- Orienter les investigations métier vers les cas extrêmes
 
 ### Filtres et interactions
 
@@ -308,11 +313,11 @@ Identifier les apporteurs présentant les écarts les plus significatifs entre c
 
 ### Règles de gestion de la page
 
-- Les écarts positifs correspondent aux cas où la collecte dépasse fortement la décollecte.
-- Les écarts négatifs correspondent aux cas où la décollecte dépasse fortement la collecte.
-- Un seuil d’affichage est appliqué afin de concentrer l’analyse sur les écarts significatifs.
-- Les barres sont triées pour faire ressortir les cas les plus marqués.
-- Le vert est utilisé pour les écarts favorables, le rouge pour les écarts défavorables.
+- Les écarts positifs correspondent aux cas où la collecte dépasse fortement la décollecte
+- Les écarts négatifs correspondent aux cas où la décollecte dépasse fortement la collecte
+- Un seuil d’affichage est appliqué afin de concentrer l’analyse sur les écarts significatifs
+- Les barres sont triées pour faire ressortir les cas les plus marqués
+- Le vert est utilisé pour les écarts favorables, le rouge pour les écarts défavorables
 
 ### Améliorations envisagées
 
@@ -325,6 +330,8 @@ Identifier les apporteurs présentant les écarts les plus significatifs entre c
 ---
 
 ## 📄 Page 4 — Actualisation du rapport
+
+<img width="1263" height="797" alt="4 - Copy" src="https://github.com/user-attachments/assets/5fde8df4-3cfa-4633-b2ce-27429ba9bf7d" />
 
 ### Objectif de la page
 
@@ -340,15 +347,15 @@ Donner de la visibilité sur le statut d’actualisation du rapport, la fraîche
 
 ### Décisions supportées
 
-- Décider si le rapport peut être utilisé pour analyse ou diffusion.
-- Identifier rapidement un problème de refresh ou de partition.
-- Alerter l’équipe data / BI en cas d’erreur.
-- Éviter l’utilisation de données obsolètes.
+- Décider si le rapport peut être utilisé pour analyse ou diffusion
+- Identifier rapidement un problème de refresh ou de partition
+- Alerter l’équipe data / BI en cas d’erreur
+- Éviter l’utilisation de données obsolètes
 
 ### Filtres et interactions
 
-Cette page ne contient pas de filtres métier interactifs classiques.  
-Elle s’appuie sur des métadonnées de suivi issues du processus d’actualisation.
+Cette page ne contient pas de filtres métier interactifs classiques
+Elle s’appuie sur des métadonnées de suivi issues du processus d’actualisation
 
 ### Visualisations clés
 
@@ -365,11 +372,11 @@ Elle s’appuie sur des métadonnées de suivi issues du processus d’actualisa
 
 ### Règles de gestion de la page
 
-- Le statut OK indique que la dernière actualisation s’est terminée correctement.
-- Le statut ERROR signale une erreur ou une absence de données pour la partition courante.
-- Si les données de la partition courante sont absentes, le rapport conserve les dernières données valides disponibles.
-- La page indique la partition utilisée pour permettre à l’utilisateur de vérifier la fraîcheur des données.
-- Les remarques importantes expliquent les limites d’actualisation et les précautions d’usage.
+- Le statut OK indique que la dernière actualisation s’est terminée correctement
+- Le statut ERROR signale une erreur ou une absence de données pour la partition courante
+- Si les données de la partition courante sont absentes, le rapport conserve les dernières données valides disponibles
+- La page indique la partition utilisée pour permettre à l’utilisateur de vérifier la fraîcheur des données
+- Les remarques importantes expliquent les limites d’actualisation et les précautions d’usage
 
 ### Améliorations envisagées
 
@@ -445,21 +452,21 @@ Elle s’appuie sur des métadonnées de suivi issues du processus d’actualisa
 
 ### Règles fonctionnelles d’accès
 
-- Accès accordé aux populations métier autorisées.
-- Partage privilégié via Power BI App lorsque possible.
-- Les droits d’édition sont limités aux équipes responsables du rapport.
-- Les données sensibles restent anonymisées dans la version portfolio.
-- Une segmentation des accès peut être envisagée si le rapport est diffusé à plusieurs niveaux métier.
+- Accès accordé aux populations métier autorisées
+- Partage privilégié via Power BI App lorsque possible
+- Les droits d’édition sont limités aux équipes responsables du rapport
+- Les données sensibles restent anonymisées dans la version portfolio
+- Une segmentation des accès peut être envisagée si le rapport est diffusé à plusieurs niveaux métier
 
 ---
 
 ## 🚀 Adoption et accompagnement utilisateur
 
-- Communication de mise à disposition : message interne ou présentation aux utilisateurs cibles.
-- Guide utilisateur : description des pages, filtres et KPIs principaux.
-- Session de présentation : recommandée pour expliquer la logique de collecte / décollecte et d’actualisation.
-- Support utilisateur : assuré par l’équipe data / BI ou le référent projet.
-- Indicateurs d’adoption : nombre de consultations, utilisateurs actifs, fréquence d’usage, retours utilisateurs.
+- Communication de mise à disposition : message interne ou présentation aux utilisateurs cibles
+- Guide utilisateur : description des pages, filtres et KPIs principaux
+- Session de présentation : recommandée pour expliquer la logique de collecte / décollecte et d’actualisation
+- Support utilisateur : assuré par l’équipe data / BI ou le référent projet
+- Indicateurs d’adoption : nombre de consultations, utilisateurs actifs, fréquence d’usage, retours utilisateurs
 
 ---
 
@@ -479,8 +486,8 @@ Elle s’appuie sur des métadonnées de suivi issues du processus d’actualisa
 
 | Version | Date | Auteur | Modifications | Statut |
 |---|---|---|---|---|
-| `v0.1` | 2025-11-01 | Maryna MOLCHAN | Création initiale de la spécification fonctionnelle. | Brouillon |
-| `v1.0` | À compléter | Maryna MOLCHAN | Validation fonctionnelle initiale. | En attente |
+| `v0.1` | N / A | Maryna MOLCHAN | Création initiale de la spécification fonctionnelle. | Valide |
+| `v1.0` | À compléter | À compléter | À compléter | À compléter |
 
 ---
 
@@ -496,14 +503,6 @@ Elle s’appuie sur des métadonnées de suivi issues du processus d’actualisa
 | **UC** | Unités de compte, utilisées dans l’analyse de la composition des encours. |
 | **Partition** | Période technique de données utilisée pour l’actualisation du rapport. |
 | **Refresh** | Processus d’actualisation des données du rapport. |
-
-### Annexes
-
-- Lien vers le rapport Power BI : [À compléter]
-- Lien vers l’app Power BI : [À compléter]
-- Lien vers les screenshots des pages : [À compléter]
-- Lien vers la documentation technique : [À compléter]
-- Lien vers les spécifications SQL associées : [À compléter]
 
 ---
 
